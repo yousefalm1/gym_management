@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-qz!43&dim=&$#hal25gk0z2mccwrn=#qyw@3%v%ciw!4jzdr9#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
-
+ALLOWED_HOSTS = ['127.0.0.1','flexgym-b1870d339c98.herokuapp.com']
 
 # Application definition
 

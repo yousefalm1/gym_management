@@ -4,3 +4,7 @@ from django.http import HttpResponse
 def index(request):
     return render(request, 'core/index.html')
 
+
+def instructors(request):
+    return render(request, 'core/instructors.html')
+

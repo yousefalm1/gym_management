@@ -13,9 +13,7 @@
 
 /* Instructors Page */
 
-margin
-
-#instructor-con{
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
+.card-img-top {
+    height: 500px; /* Adjust the height as needed */
+    object-fit:cover;
+  }

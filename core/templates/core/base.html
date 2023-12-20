@@ -27,7 +27,7 @@
     <!-- Nav -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
       <div class="container-fluid">
-        <a class="navbar-brand" href="your_actual_url">FlexGym</a>
+        <a class="navbar-brand" href="{% url 'index'%}">FlexGym</a>
         <button 
           class="navbar-toggler button-nav"
           type="button"
@@ -47,10 +47,10 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#">Instructors</a>
+              <a class="nav-link mx-2" href="{% url 'instructors' %}">Instructors</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#">Classes</a>
+              <a class="nav-link mx-2" href="{% url 'classes'%}">Classes</a>
             </li>
 
             <li class="nav-item">

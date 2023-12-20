@@ -1,4 +1,4 @@
-{% load static %}
+
 
 {% extends 'core/base.html' %}
 
@@ -6,6 +6,30 @@
 
 {% block content %}
 <header>
+  <!-- Intro settings -->
+  <style>
+    /* Default height for small devices */
+    #intro-example {
+      height: 400px;
+    }
+
+    /* Height for devices larger than 992px */
+    @media (min-width: 992px) {
+      #intro-example {
+        height: 600px;
+      }
+    }
+
+    .btn-outline-light:hover {
+      color: #343a40;
+      background-color: #ffffff; 
+      border-color: #ffffff; 
+    }
+  </style>
+  
+  </style>
+
+
   <!-- Background image -->
   <div id="intro-example" class="p-5 text-center bg-image"
     style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');">

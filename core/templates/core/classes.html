@@ -16,7 +16,7 @@
 
                             {% if user.is_authenticated %}
                                 {% if gym_class.users.count < gym_class.max_capacity %}
-                                    <a href="{% url 'join_class' class_id=gym_class.class_id %}">
+                                    <a href="{% url 'core/join_success.html' class_id=gym_class.class_id %}">
                                         <button type="button" class="btn btn-primary">Join Class</button>
                                     </a>
                                 {% else %}

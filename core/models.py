@@ -71,6 +71,7 @@ class GymClasses(models.Model):
     class_id = models.AutoField(primary_key=True)
     class_name = models.CharField(max_length=100)
     room_number = models.CharField(max_length=50)
+    description = models.TextField(default="Your default description goes here")
     max_capacity = models.IntegerField()
     users = models.ManyToManyField(User)
 

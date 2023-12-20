@@ -1,14 +1,109 @@
 {% extends 'core/base.html' %}
 
+{% load static%}
+
 
 {% block content %}
-  <h2>Gym Classes</h2>
-  <ul>
-    {% for gym_class in classes %}
-      <li>{{ gym_class.class_name }} - {{ gym_class.room_number }}
-        (Max Capacity: {{ gym_class.max_capacity}})
-        {}
-      </li>
-    {% endfor %}
-  </ul>
+<h2> Gym Clases</h2>
+<div class="container mt-5 mb-5">
+    <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="" class="card-img-top" alt="Boxing Class Image">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Boxing Class</h3>
+                    <p class="card-text">Step into the ring with confidence at John Mitchell's Boxing Class. Led by the seasoned coach, John Mitchell, our classes cater to all levels. Expect a dynamic blend of technical skill development, cardiovascular conditioning, and mental toughness. Join us for an electrifying workout, focusing on precision and technique, under the expert guidance of John Mitchell. Unleash your inner champion.</p>
+                    
+                    <a href="">
+                        <button type="button" class="btn btn-primary">Book Slot</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="" class="card-img-top" alt="Boxing Class Image">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Boxing Class</h3>
+                    <p class="card-text">Step into the ring with confidence at John Mitchell's Boxing Class. Led by the seasoned coach, John Mitchell, our classes cater to all levels. Expect a dynamic blend of technical skill development, cardiovascular conditioning, and mental toughness. Join us for an electrifying workout, focusing on precision and technique, under the expert guidance of John Mitchell. Unleash your inner champion.</p>
+                    
+                    <a href="">
+                        <button type="button" class="btn btn-primary">Book Slot</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="" class="card-img-top" alt="Boxing Class Image">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Boxing Class</h3>
+                    <p class="card-text">Step into the ring with confidence at John Mitchell's Boxing Class. Led by the seasoned coach, John Mitchell, our classes cater to all levels. Expect a dynamic blend of technical skill development, cardiovascular conditioning, and mental toughness. Join us for an electrifying workout, focusing on precision and technique, under the expert guidance of John Mitchell. Unleash your inner champion.</p>
+                    
+                    <a href="">
+                        <button type="button" class="btn btn-primary">Book Slot</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="" class="card-img-top" alt="Boxing Class Image">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Boxing Class</h3>
+                    <p class="card-text">Step into the ring with confidence at John Mitchell's Boxing Class. Led by the seasoned coach, John Mitchell, our classes cater to all levels. Expect a dynamic blend of technical skill development, cardiovascular conditioning, and mental toughness. Join us for an electrifying workout, focusing on precision and technique, under the expert guidance of John Mitchell. Unleash your inner champion.</p>
+                    
+                    <a href="">
+                        <button type="button" class="btn btn-primary">Book Slot</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="" class="card-img-top" alt="Boxing Class Image">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Boxing Class</h3>
+                    <p class="card-text">Step into the ring with confidence at John Mitchell's Boxing Class. Led by the seasoned coach, John Mitchell, our classes cater to all levels. Expect a dynamic blend of technical skill development, cardiovascular conditioning, and mental toughness. Join us for an electrifying workout, focusing on precision and technique, under the expert guidance of John Mitchell. Unleash your inner champion.</p>
+                    
+                    <a href="">
+                        <button type="button" class="btn btn-primary">Book Slot</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="" class="card-img-top" alt="Boxing Class Image">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Boxing Class</h3>
+                    <p class="card-text">Step into the ring with confidence at John Mitchell's Boxing Class. Led by the seasoned coach, John Mitchell, our classes cater to all levels. Expect a dynamic blend of technical skill development, cardiovascular conditioning, and mental toughness. Join us for an electrifying workout, focusing on precision and technique, under the expert guidance of John Mitchell. Unleash your inner champion.</p>
+                    
+                    <a href="">
+                        <button type="button" class="btn btn-primary">Book Slot</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
 {% endblock %}
+
+
+
+
+
+
+{% comment %} <ul>
+  {% for gym_class in classes %}
+    <li>{{ gym_class.class_name }} - {{ gym_class.room_number }}
+      (Max Capacity: {{ gym_class.max_capacity}})
+      {}
+    </li>
+  {% endfor %}
+</ul> {% endcomment %}

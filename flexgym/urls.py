@@ -3,9 +3,10 @@ from django.urls import path
 from core.views import index, instructors, classes, join_class
 
 urlpatterns = [
-    path('', index, name='index'),
     path('instructors/', instructors, name='instructors'),
     path('classes/', classes, name='classes'),
     path('join_class/<int:class_id>/', join_class, name='join_class'),
     path('admin/', admin.site.urls),
+    path('', index, name='index'),
+
 ]

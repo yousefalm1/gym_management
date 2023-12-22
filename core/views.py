@@ -1,10 +1,20 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from .models import GymClasses
+from django.utils import timezone
+
+from .models import GymClasses, UserProfile
 
 def index(request):
     return render(request, 'index.html')
 
+
+def profile(request):
+    user_profile, created = UserProfile.objects.get_or_create(user=request.user)
+
+    if created:
+        user_profile.join_date = timezone.now()
+        user_profile.save()
+    return render(request, 'profile.html', {'user_profile': user_profile})
 
 def instructors(request):
     return render(request, 'instructors.html')

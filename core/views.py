@@ -24,7 +24,7 @@ def join_class(request, class_id):
         # Adds the current user to the gym class by updating the 'users' field which is a ManyToManyField
         gym_class.users.add(request.user)
         # After successfully adding the user to the class the view renders the html and passes the class name 
-        return render(request, 'core/join_success.html',{'class_name': gym_class.class_name})
+        return render(request, 'join_success.html',{'class_name': gym_class.class_name})
     # If the class is full the code inside the block is executed and renders the join_failure.html template and passes the class name
     else:
-        return render(request, 'core/join_failure.html', {'class_name': gym_class.class_name})
+        return render(request, 'join_failure.html', {'class_name': gym_class.class_name})

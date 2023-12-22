@@ -55,6 +55,9 @@
         <li class="nav-item">
           <a class="nav-link mx-2 {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}">Logout</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="{% url 'profile' %}">Classes</a>
+        </li>
         {% else %}
         <li class="nav-item">
           <a class="nav-link mx-2 {% if request.path == signup_url %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>

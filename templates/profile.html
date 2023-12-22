@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>User Profile</h2>
-    <p>Username: {{ user_profile.user.username }}</p>
-    <p>Membership: {{ user_profile.membership_choice }}</p>
-    <p>Join Date: {{ user_profile.join_date }}</p>
-    <!-- Add other profile fields as needed -->
+<div class="container mt-5">
+    <h2 class="mb-4">User Profile</h2>
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text"><strong>Username:</strong> {{ user_profile.user.username }}</p>
+            <p class="card-text"><strong>Membership:</strong> {{ user_profile.membership_choices }}</p>
+            <p class="card-text"><strong>Join Date:</strong> {{ user_profile.join_date }}</p>
+        </div>
+    </div>
+</div>
 {% endblock %}

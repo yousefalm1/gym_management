@@ -21,7 +21,7 @@ class UserProfile(models.Model):
 
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    membership_choices = models.CharField(max_length=50)
+    membership_choices = models.CharField( choices=MEMBERSHIP_CHOICES)
     join_date = models.DateField(default=timezone.now)
     new_membership_purchase = models.BooleanField(default=False)
 

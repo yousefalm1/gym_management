@@ -33,6 +33,9 @@ class InstructorProfile(models.Model):
     instructor = models.OneToOneField(User, on_delete=models.CASCADE)
     specialization = models.CharField(max_length=50)
     certification = models.TextField()
+    display_name = models.CharField(max_length=100)
+    
+
 
     def __str__(self):
         return self.instructor.username
@@ -65,6 +68,7 @@ class AdminProfile(models.Model):
 
 
 class GymClasses(models.Model):
+    
     class_id = models.AutoField(primary_key=True)
     class_name = models.CharField(max_length=100)
     room_number = models.CharField(max_length=50)

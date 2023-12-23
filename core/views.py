@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.utils import timezone
 
-from .models import GymClasses, UserProfile
+from .models import GymClasses, UserProfile, InstructorProfile
 
 def index(request):
     return render(request, 'index.html')
@@ -17,7 +17,9 @@ def profile(request):
     return render(request, 'profile.html', {'user_profile': user_profile})
 
 def instructors(request):
-    return render(request, 'instructors.html')
+    instructor_profiles = InstructorProfile.objects.all()
+
+    return render(request, 'instructors.html', {'instructor_profiles': instructor_profiles})
 
 
 def classes(request):

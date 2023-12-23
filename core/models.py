@@ -33,8 +33,8 @@ class InstructorProfile(models.Model):
     instructor = models.OneToOneField(User, on_delete=models.CASCADE)
     specialization = models.CharField(max_length=50)
     certification = models.TextField()
-    display_name = models.CharField(max_length=100)
-    
+    display_name = models.CharField(max_length=100, default='Default Display Name')
+
 
 
     def __str__(self):

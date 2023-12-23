@@ -71,7 +71,7 @@ class GymClasses(models.Model):
     description = models.TextField(default="Your default description goes here")
     max_capacity = models.IntegerField()
     users = models.ManyToManyField(User)
-    class_image = models.ImageField(upload_to='static/images/classes_images', null=True, blank=True)
+    class_image = models.ImageField(upload_to='instructor_images', null=True, blank=True)
 
     def __str__(self):
         return self.class_name

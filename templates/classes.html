@@ -1,12 +1,18 @@
-{% extends 'base.html' %} {% load static%} 
+{% extends 'base.html' %}
+{% load static %} 
+
 {% block content %}
-    <h2> Gym Classes</h2>
+    <h2>Gym Classes</h2>
     <div class="container mt-5 mb-5">
         <div class="row g-4">
             {% for gym_class in classes %}
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
-                        <img src="{{ MEDIA_URL }}classes_images/{{ gym_class.class_image.name }}" class="card-img-top" alt="Boxing Class Image">
+                        {% if gym_class.class_image %}
+                            <img src="{{ gym_class.class_image.url }}" class="card-img-top" alt="Boxing Class Image">
+                        {% else %}
+                            <p>No image available</p>
+                        {% endif %}
                         <div class="card-body text-center">
                             <h3 class="card-title">{{ gym_class.class_name }}</h3>
                             <p class="card-text">{{ gym_class.description }}</p>
@@ -30,9 +36,6 @@
         </div>
     </div>
 {% endblock %}
-
-
-
 
 
 

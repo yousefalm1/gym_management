@@ -1,6 +1,10 @@
+from django.conf import settings
+from django.conf.urls.static import static
+
 from django.contrib import admin
 from django.urls import path,include
 from core.views import index, instructors, classes, join_class, profile
+
 
 urlpatterns = [
     path('instructors/', instructors, name='instructors'),
@@ -10,5 +14,4 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

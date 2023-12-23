@@ -6,7 +6,7 @@
             {% for gym_class in classes %}
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
-                        <img src="" class="card-img-top" alt="Boxing Class Image">
+                        <img src="{{ MEDIA_URL }}classes_images/{{ gym_class.class_image.name }}" class="card-img-top" alt="Boxing Class Image">
                         <div class="card-body text-center">
                             <h3 class="card-title">{{ gym_class.class_name }}</h3>
                             <p class="card-text">{{ gym_class.description }}</p>

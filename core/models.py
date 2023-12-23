@@ -21,7 +21,7 @@ class UserProfile(models.Model):
 
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    membership_choices = models.CharField( choices=MEMBERSHIP_CHOICES)
+    membership_choices = models.CharField(choices=MEMBERSHIP_CHOICES)
     join_date = models.DateField(default=timezone.now)
     new_membership_purchase = models.BooleanField(default=False)
 
@@ -71,6 +71,7 @@ class GymClasses(models.Model):
     description = models.TextField(default="Your default description goes here")
     max_capacity = models.IntegerField()
     users = models.ManyToManyField(User)
+    class_image = models.ImageField(upload_to='static/images/classes_images', null=True, blank=True)
 
     def __str__(self):
         return self.class_name

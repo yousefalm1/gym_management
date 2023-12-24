@@ -78,6 +78,7 @@ class GymClasses(models.Model):
     max_capacity = models.IntegerField()
     users = models.ManyToManyField(User)
     class_image = models.ImageField(upload_to='class_images', null=True, blank=True)
+    instructors = models.ManyToManyField(InstructorProfile)
 
     def __str__(self):
         return self.class_name

@@ -1,8 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 {% load static %} 
-
 {% block content %}
-    <h2>Gym Classes</h2>
+    <h2> Gym Classes</h2>
     <div class="container mt-5 mb-5">
         <div class="row g-4">
             {% for gym_class in classes %}
@@ -19,6 +18,12 @@
 
                             <p><strong> Max Capacity:</strong> {{ gym_class.max_capacity }} </p>
                             <p><strong> Room Number:</strong> {{ gym_class.room_number }} </p>
+                            <p><strong> Instructors:</strong>
+                                {% for instructor in gym_class.instructors.all %}
+                                    {{ instructor.display_name }}
+                                    {% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </p>
 
                             {% if user.is_authenticated %}
                                 {% if gym_class.users.count < gym_class.max_capacity %}

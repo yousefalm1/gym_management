@@ -1,28 +1,30 @@
 {% extends 'base.html' %}
-
-
 {% block title %}Welcome{% endblock %}
-
 {% block content %}
 {% load static %}
-
-
 
 <div class="container mt-5 mb-5">
   <div class="row g-3">
     {% for instructor_profile in instructor_profiles %}
     <div class="col-12 col-md-6 col-lg-4">
       <div class="card">
-        <img src="" alt="" class="card-img-top instructors-img">
+        {% if instructor_profile.instructor_image %}
+        <img
+          src="{{ instructor_profile.instructor_image.url }}"
+          class="card-img-top"
+          alt="Instructor Image"
+        />
+        {% else %}
+        <p>No image available</p>
+        {% endif %}
         <div class="card-body">
-          <h5 class="card-title">{{ instructor_profile.display_name}}</h5>
-          <p class="card text">{{ instructor_profile.specialization}}</p>
-          <p class="card-text"> {{ instructor_profile.certification}}</p>
-        </div> 
+          <h5 class="card-title">{{ instructor_profile.display_name }}</h5>
+          <p class="card-text">{{ instructor_profile.specialization }}</p>
+          <p class="card-text">{{ instructor_profile.certification }}</p>
+        </div>
       </div>
     </div>
     {% endfor %}
-
   </div>
 </div>
 

@@ -34,6 +34,8 @@ class InstructorProfile(models.Model):
     specialization = models.CharField(max_length=50)
     certification = models.TextField()
     display_name = models.CharField(max_length=100, default='Default Display Name')
+    instructor_image = models.ImageField(upload_to='instructors_photo', null=True, blank=True)
+
 
 
 
@@ -75,7 +77,7 @@ class GymClasses(models.Model):
     description = models.TextField(default="Your default description goes here")
     max_capacity = models.IntegerField()
     users = models.ManyToManyField(User)
-    class_image = models.ImageField(upload_to='instructor_images', null=True, blank=True)
+    class_image = models.ImageField(upload_to='class_images', null=True, blank=True)
 
     def __str__(self):
         return self.class_name

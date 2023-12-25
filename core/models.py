@@ -18,8 +18,6 @@ class UserProfile(models.Model):
         ('silver', 'Silver'),
         ('gold', 'Gold'),
     ]
-
-
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     membership_choices = models.CharField(choices=MEMBERSHIP_CHOICES)
     join_date = models.DateField(default=timezone.now)

@@ -26,13 +26,19 @@
                             </p>
 
                             {% if user.is_authenticated %}
-                                {% if gym_class.users.count < gym_class.max_capacity %}
-                                    <a href="{% url 'join_class' class_id=gym_class.class_id %}">
-                                        <button type="button" class="btn btn-primary">Join Class</button>
-                                    </a>
+                                {% if user.userporifle.membership_choices %}
+                                    {% if gym_class.users.count < gym_class.max_capacity %}
+                                        <a href="{% url 'join_class' class_id=gym_class.class_id %}">
+                                            <button type="button" class="btn btn-primary">Join Class</button>
+                                        </a>
+                                    {% else %}
+                                        <p><strong> Class is full</strong></p>
+                                    {% endif %}
                                 {% else %}
-                                    <p><strong> Class is full</strong></p>
-                                {% endif %}
+                                    <p><strong> No membership</strong></p>
+                                {% endif%}
+                            {% else %}
+                                <p><strong> You need to be logged in</strong></p>
                             {% endif %}
                         </div>
                     </div>

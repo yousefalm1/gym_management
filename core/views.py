@@ -31,8 +31,6 @@ def join_class(request, class_id):
 # Retrieve the specific gym class from the database based on the provided 'class_id'
     gym_class = get_object_or_404(GymClasses, pk=class_id)
 
-
-
     # Check if the user has a membership
     user_profile, created = UserProfile.objects.get_or_create(user=request.user)
     if user_profile.membership_choices:
@@ -48,10 +46,10 @@ def join_class(request, class_id):
     else:
         return render(request, 'no_membership.html' )
     
-    
-def cancel_booking(request, class_id):
+
+def cancel_class(request, class_id):
     gym_class = get_object_or_404(GymClasses, pk=class_id)
 
-    return render(request, 'cancel_success.html', {'class_name': gym_class.class_name})
-
-
+    if request.user in gym_class.users.all():
+        gym_class.users.remove(request.user)
+        return render(request, 'cancel_success.html', {'class_name': gym_class.class_name})

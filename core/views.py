@@ -45,6 +45,13 @@ def join_class(request, class_id):
         # If the class is full the code inside the block is executed and renders the join_failure.html template and passes the class name
         else:
             return render(request, 'join_failure.html', {'class_name': gym_class.class_name})
-        
+    else:
+        return render(request, 'no_membership.html' )
     
+    
+def cancel_booking(request, class_id):
+    gym_class = get_object_or_404(GymClasses, pk=class_id)
+
+    return render(request, 'cancel_success.html', {'class_name': gym_class.class_name})
+
 

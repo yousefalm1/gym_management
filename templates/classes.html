@@ -28,9 +28,9 @@
                             {% if user.is_authenticated %}
                                 {% if user.userprofile.membership_choices %}
                                     {% if user in gym_class.users.all %}
-                                        <a href="{% url 'cancel_class' class_id=gym_class.class_id %}">
-                                            <button type="button" class="btn btn-danger">Cancel Class</button>
-                                        </a>
+                                    <a href="{% url 'cancel_class' class_id=gym_class.class_id %}" onclick="return confirmCancel()">
+                                        <button type="button" class="btn btn-danger">Cancel Class</button>
+                                    </a>
                                     {% else %}
                                         {% if gym_class.users.count < gym_class.max_capacity %}
                                             <a href="{% url 'join_class' class_id=gym_class.class_id %}">
@@ -52,6 +52,9 @@
             {% endfor %}
         </div>
     </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
 {% endblock %}
 
 

@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.utils import timezone
 from django.contrib.auth.models import User
@@ -59,3 +59,8 @@ def staff_area(request):
 
     users = User.objects.all()
     return render(request, 'staff_area.html', {'users': users})
+
+def delete_user(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    user.delete()
+    return redirect('staff_area')

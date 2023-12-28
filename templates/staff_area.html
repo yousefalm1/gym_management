@@ -1,11 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
     <h2>Staff Area</h2>
+    <button id="showUsersBtn">Show Users</button>
 
-    <h3>All Users</h3>
-    <ul>
-        {% for user in users %}
-            <li>{{ user.username }}</li>
-        {% endfor %}
-    </ul>
+    <div id="userList" style="display: none;">
+        <h3>All Users</h3>
+        <ul>
+            {% for user in users %}
+            <li>
+                <strong>Username:</strong> {{ user.username }}<br>
+                <strong>Email:</strong> {{ user.email }}<br>
+                <strong>Registration Date:</strong> {{ user.date_joined|date:"F d, Y" }}
+                <a href="{% url 'delete_user' user.id %}">Delete</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('showUsersBtn').addEventListener('click', function () {
+            document.getElementById('userList').style.display = (userList.style.display === 'none') ? 'block' : 'none';
+        });
+    </script>
 {% endblock %}

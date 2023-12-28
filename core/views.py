@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.utils import timezone
-
+from django.contrib.auth.models import User
 from .models import GymClasses, UserProfile, InstructorProfile
 
 def index(request):
@@ -53,3 +53,9 @@ def cancel_class(request, class_id):
     if request.user in gym_class.users.all():
         gym_class.users.remove(request.user)
         return render(request, 'cancel_success.html', {'class_name': gym_class.class_name})
+
+
+def staff_area(request):
+
+    users = User.objects.all()
+    return render(request, 'staff_area.html', {'users': users})

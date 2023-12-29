@@ -95,14 +95,20 @@ def user_classes(request, user_id):
 
 
 def add_user_to_class(request, user_id):
+    # retrieve the user based on the user_id from the URL
     user = get_object_or_404(User, id=user_id)
-    gym_classes = gym_classes.object.all()
+    # Retrieve all gym classes from the database
+    gym_classes = GymClasses.objects.all()
 
+    # Check if the form is submitted using the POST method
     if request.method == 'POST':
+        # get the selected class_id from the submitted form
         class_id = request.POST.get('class_choice')
+        # get the gym class based on the selected class_id
         gym_class = get_object_or_404(GymClasses, class_id = class_id)
+        # Add the user to the selected gym class
         gym_class.users.add(user)
 
         return redirect('staff_area')
 
-    return render(request, 'add_user_to_Class.html', {'user':user, 'gym_class': gym_class})
+    return render(request, 'add_user_to_class.html', {'user':user, 'gym_classes': gym_classes})

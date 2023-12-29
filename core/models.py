@@ -17,6 +17,7 @@ class UserProfile(models.Model):
         ('bronze', 'Bronze'),
         ('silver', 'Silver'),
         ('gold', 'Gold'),
+        ('none', 'None'),
     ]
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     membership_choices = models.CharField(choices=MEMBERSHIP_CHOICES)

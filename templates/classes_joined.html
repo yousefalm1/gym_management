@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
+{% comment %} Displays the username of the user {% endcomment %}
 <h2> Classes Joined - {{ user.username }}</h2>
 {% comment %} Checks if user has joined classes if yes it executes the code inside the if statement {% endcomment %}
     {% if gym_classes%}
@@ -13,6 +13,7 @@
                 </ol>
             {% endfor %}
         </ul>
+        {% comment %} else block if the user has joined no class this block will be excuted  {% endcomment %}
     {% else %}
         <p>No Classes Joined</p>
     {% endif %}

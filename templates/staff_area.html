@@ -13,12 +13,19 @@
                 <strong>Registration Date:</strong> {{ user.date_joined|date:"F d, Y" }}<br>
                 <a href="{% url 'delete_user' user.id %}">Delete</a><br>
                 <a href="{% url 'edit_membership' user.id %}"> Edit Membership </a><br>
-                <a href="{% url 'user_classes' user.id %}" > Classes Joined </a>
+                <a href="{% url 'user_classes' user.id %}" > Classes Joined </a><br>
+                <a href="{% url 'add_user_to_class' user.id %}" > Add to a Class</a>
             </li>
             {% endfor %}
         </ul>
     </div>
-   
+        
+    <div>
+
+
+
+    </div>
+
     <script>
         document.getElementById('showUsersBtn').addEventListener('click', function () {
             document.getElementById('userList').style.display = (userList.style.display === 'none') ? 'block' : 'none';

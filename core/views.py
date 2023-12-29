@@ -84,9 +84,25 @@ def edit_membership(request, user_id):
 
 
 def user_classes(request, user_id):
-
+    # retrieves a 'User' form the database based on the user_id
     user = get_object_or_404(User, id=user_id)
+    # this queries the 'GymClasses' model to get all the instances to use in the template
     gym_classes = GymClasses.objects.filter(users=user )
 
+    # renders the provided html with the context to able to use it in the template
     return render(request, 'classes_joined.html', {'gym_classes': gym_classes})
 
+
+
+def add_user_to_class(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    gym_classes = gym_classes.object.all()
+
+    if request.method == 'POST':
+        class_id = request.POST.get('class_choice')
+        gym_class = get_object_or_404(GymClasses, class_id = class_id)
+        gym_class.users.add(user)
+
+        return redirect('staff_area')
+
+    return render(request, 'add_user_to_Class.html', {'user':user, 'gym_class': gym_class})

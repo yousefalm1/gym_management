@@ -1,6 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
+from django.urls import reverse
+
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
+
 from django.contrib.auth.models import User
 from .models import GymClasses, UserProfile, InstructorProfile
 
@@ -60,7 +64,20 @@ def staff_area(request):
     users = User.objects.all()
     return render(request, 'staff_area.html', {'users': users})
 
+
 def delete_user(request, user_id):
     user = get_object_or_404(User, id=user_id)
     user.delete()
     return redirect('staff_area')
+
+@login_required
+def edit_membership(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    user_profile = get_object_or_404(UserProfile, user=user )
+
+    if request.method == 'POST':
+        new_membership_choice = request.POST.get('membership_choice')
+        user_profile.membership_choices = new_membership_choice
+        user_profile.save()
+
+    return render(request, 'edit_membership.html', {'user_profile': user_profile})

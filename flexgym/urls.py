@@ -3,7 +3,7 @@ from django.conf.urls.static import static
 
 from django.contrib import admin
 from django.urls import path,include
-from core.views import index, instructors, classes, join_class, profile, cancel_class, staff_area, delete_user
+from core.views import index, instructors, classes, join_class, profile, cancel_class, staff_area, delete_user, edit_membership
 
 
 urlpatterns = [
@@ -15,7 +15,8 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('staff/',staff_area, name='staff_area' ),
-        path('delete_user/<int:user_id>/', delete_user, name='delete_user'),
+    path('delete_user/<int:user_id>/', delete_user, name='delete_user'),
+    path('edit_membership/<int:user_id>/', edit_membership, name='edit_membership'),
 
     path('', index, name='index'),
 ] 

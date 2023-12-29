@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Edit Membership - {{ user_profile.user.username }}</h2>
+    <p>Current Membership: {{ user_profile.membership_choices }}</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <label for="membership_choice">New Membership:</label>
+        <select name="membership_choice" id="membership_choice">
+            <option value="bronze">Bronze</option>
+            <option value="silver">Silver</option>
+            <option value="gold">Gold</option>
+        </select>
+        <button type="submit">Save Changes</button>
+    </form>
+{% endblock %}

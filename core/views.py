@@ -60,9 +60,10 @@ def cancel_class(request, class_id):
 
 
 def staff_area(request):
-
+    gym_classes = GymClasses.objects.all()
     users = User.objects.all()
-    return render(request, 'staff_area.html', {'users': users})
+
+    return render(request, 'staff_area.html', {'users': users, 'gym_classes':gym_classes})
 
 
 def delete_user(request, user_id):
@@ -112,3 +113,4 @@ def add_user_to_class(request, user_id):
         return redirect('staff_area')
 
     return render(request, 'add_user_to_class.html', {'user':user, 'gym_classes': gym_classes})
+

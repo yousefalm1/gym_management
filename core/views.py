@@ -81,3 +81,12 @@ def edit_membership(request, user_id):
         user_profile.save()
 
     return render(request, 'edit_membership.html', {'user_profile': user_profile})
+
+
+def user_classes(request, user_id):
+
+    user = get_object_or_404(User, id=user_id)
+    gym_classes = GymClasses.objects.filter(users=user )
+
+    return render(request, 'classes_joined.html', {'gym_classes': gym_classes})
+

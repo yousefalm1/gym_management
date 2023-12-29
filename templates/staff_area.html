@@ -12,7 +12,8 @@
                 <strong>Email:</strong> {{ user.email }}<br>
                 <strong>Registration Date:</strong> {{ user.date_joined|date:"F d, Y" }}<br>
                 <a href="{% url 'delete_user' user.id %}">Delete</a><br>
-                <a href="{% url 'edit_membership' user.id %}"> Edit Membership </a>
+                <a href="{% url 'edit_membership' user.id %}"> Edit Membership </a><br>
+                <a href="{% url 'user_classes' user.id %}" > Classes Joined </a>
             </li>
             {% endfor %}
         </ul>

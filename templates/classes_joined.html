@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2> Classes Joined - {{ user.username }}</h2>
+{% comment %} Checks if user has joined classes if yes it executes the code inside the if statement {% endcomment %}
+    {% if gym_classes%}
+        <ul>
+            {% comment %} Loops thru each class in the gym_classes {% endcomment %}
+            {% for gym_class in gym_classes %}
+                <ol>
+                    <strong>Class name:</strong> {{gym_class.class_name }}<br>
+                    <Strong>Room Number:</strong> {{gym_class.room_number}}
+                </ol>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No Classes Joined</p>
+    {% endif %}
+{% endblock %}

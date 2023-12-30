@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth.models import User
 from .models import GymClasses, UserProfile, InstructorProfile
-from .forms import InstructorProfileForm
+from .forms import InstructorProfileForm, GymClassForm
 
 
 
@@ -134,3 +134,15 @@ def create_instructor_profile(request):
 
     return render(request, 'create_instructor_profile.html', {'form': form})
 
+
+def create_gym_class(request):
+    
+    if request.method == 'POST':
+        form = GymClassForm(request.POST, request.FILES)
+        if form.is_valid():
+            gym_class = form.save()
+            return redirect('staff_area')
+        else:
+            form =GymClassForm()
+
+        return render('Create_gym_class.html', {'form': form})

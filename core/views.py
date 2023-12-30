@@ -136,13 +136,12 @@ def create_instructor_profile(request):
 
 
 def create_gym_class(request):
-    
     if request.method == 'POST':
         form = GymClassForm(request.POST, request.FILES)
         if form.is_valid():
             gym_class = form.save()
             return redirect('staff_area')
-        else:
-            form = GymClassForm()
+    else:
+        form = GymClassForm()
 
-        return render('Create_gym_class.html', {'form': form})
+    return render('create_gym_class.html', {'form': form})

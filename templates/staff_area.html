@@ -42,6 +42,7 @@
             </ul>
     </div>
 
+   
     <script>
         document.getElementById('showUsersBtn').addEventListener('click', function () {
             document.getElementById('userList').style.display = (userList.style.display === 'none') ? 'block' : 'none';
@@ -57,11 +58,13 @@
 
     {% comment %} iterates thru each classButtons {% endcomment %}
     {% comment %} then attaches a click event listener to each button {% endcomment %}
+    {% comment %} 'button.nextElementSibling;' means when the user clicks the show users btn it will refer to the element under it  {% endcomment %}
     {% comment %} then it checks if the classlist style display is none it will change it to block to show the users and if the statement is false it will keep the none{% endcomment %}
     classButtons.forEach(function (button) {
         button.addEventListener('click', function () {
 
             var classUserList = button.nextElementSibling;
+
             classUserList.style.display = (classUserList.style.display === 'none') ? 'block' : 'none';
         });
     });

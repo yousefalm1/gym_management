@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import GymClasses, UserProfile, InstructorProfile
 
+
 def index(request):
     return render(request, 'index.html')
 
@@ -113,4 +114,6 @@ def add_user_to_class(request, user_id):
         return redirect('staff_area')
 
     return render(request, 'add_user_to_class.html', {'user':user, 'gym_classes': gym_classes})
+
+
 

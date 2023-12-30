@@ -3,7 +3,7 @@ from django.conf.urls.static import static
 
 from django.contrib import admin
 from django.urls import path,include
-from core.views import index, instructors, classes, join_class, profile, cancel_class, staff_area, delete_user, edit_membership, user_classes, add_user_to_class, create_instructor_profile
+from core.views import index, instructors, classes, join_class, profile, cancel_class, staff_area, delete_user, edit_membership, user_classes, add_user_to_class, create_instructor_profile, create_gym_class
 
 
 urlpatterns = [
@@ -19,7 +19,10 @@ urlpatterns = [
     path('edit_membership/<int:user_id>/', edit_membership, name='edit_membership'),
     path('user_classes/<int:user_id>/', user_classes, name='user_classes'),
     path('add_user_to_class/<int:user_id>/', add_user_to_class, name="add_user_to_class"),
+
     path('create_instructor_profile/', create_instructor_profile, name='create_instructor_profile'),
+    path('create_gym_class/', create_gym_class, name='create_gym_class'),
+
 
     path('', index, name='index'),
 ] 

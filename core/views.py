@@ -143,6 +143,6 @@ def create_gym_class(request):
             gym_class = form.save()
             return redirect('staff_area')
         else:
-            form =GymClassForm()
+            form = GymClassForm()
 
         return render('Create_gym_class.html', {'form': form})

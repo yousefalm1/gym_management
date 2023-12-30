@@ -7,6 +7,8 @@ from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth.models import User
 from .models import GymClasses, UserProfile, InstructorProfile
+from .forms import InstructorProfileForm
+
 
 
 def index(request):
@@ -116,4 +118,19 @@ def add_user_to_class(request, user_id):
     return render(request, 'add_user_to_class.html', {'user':user, 'gym_classes': gym_classes})
 
 
+
+@login_required 
+def create_instructor_profile(request):
+    # checks if the request method is a post request
+    if request.method == 'POST':
+        # this gathers the data for creating a new instructor profile, the 'request.POST' contains the form data submitted thru the post request and 'request.FILES' contains the uploaded files
+        form  = InstructorProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            instructor_profile = form.save()
+            return redirect('staff_area')
+    else:
+        # if the request is not POST it creates a new InstructorProfileForm to display an empty form to the user.
+        form = InstructorProfileForm()
+
+    return render(request, 'create_instructor_profile.html', {'form': form})
 

@@ -29,6 +29,14 @@
                 {% for gym_class in gym_classes %}
                 <li>
                     <strong>{{gym_class.class_name}}</strong>
+                    {% comment %} data-class-id to associate each "Show Users" button with a specific gym class  {% endcomment %}
+                    <button class="showUsersBtn" data-class-id="{{ gym_class.class_id}}">Show Users</button>
+                    <ul class="showUserList" style="display: none;">
+                        {% comment %} iterate over the users in the class then displays them {% endcomment %}
+                        {% for user_in_class in gym_class.users.all %}
+                            <li>{{ user_in_class.username}}</li>
+                        {% endfor %}
+                    </ul>
                 </li>
                 {% endfor%}
             </ul>
@@ -41,7 +49,22 @@
 
         document.getElementById('showClassesBtn').addEventListener('click', function () {
             var classList = document.getElementById('classList');
-            classList.style.display = (classList.style.display === 'none' || classList.style.display === '') ? 'block' : 'none';
+            classList.style.display = (classList.style.display === 'none' ) ? 'block' : 'none';
         });
+
+    {% comment %} selects all the elements with the class 'showUsersBtn' and then stores it in the classButtons variable {% endcomment %}
+    var classButtons = document.querySelectorAll('.showUsersBtn');
+
+    {% comment %} iterates thru each classButtons {% endcomment %}
+    {% comment %} then attaches a click event listener to each button {% endcomment %}
+    {% comment %} then it checks if the classlist style display is none it will change it to block to show the users and if the statement is false it will keep the none{% endcomment %}
+    classButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+
+            var classUserList = button.nextElementSibling;
+            classUserList.style.display = (classUserList.style.display === 'none') ? 'block' : 'none';
+        });
+    });
+
     </script>
 {% endblock %}

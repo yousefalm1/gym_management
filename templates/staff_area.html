@@ -13,9 +13,9 @@
                 <strong>Registration Date:</strong> {{ user.date_joined|date:"F d, Y" }}<br>
                 
                 {% if user.instructorprofile %}
-                    <strong> User Type:</strong> Instructor<br>
+                    <strong> User Type:</strong> Instructor <br>
                 {% else %}
-                    <strong>User Type:</strong> Regular User<br>
+                    <strong>User Type:</strong> Member <br>
                 {% endif %}
                 <a href="{% url 'delete_user' user.id %}">Delete</a><br>
                 <a href="{% url 'edit_membership' user.id %}"> Edit Membership </a><br>

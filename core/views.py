@@ -154,8 +154,18 @@ def edit_class(request, class_id):
         form = GymClassForm(request.POST, instance=gym_class)
         if form.is_Valid():
             form.save()
-            return redirect('classes')
+            return redirect('staff_area')
     else:
         form = GymClassForm(instance=gym_class)
     
     return render(request, 'edit_class.html', {'form': form, 'gym_class': gym_class})
+
+
+def delete_class(request, class_id):
+    gym_class = get_object_or_404(GymClasses, pk=class_id)
+
+    if request.method == 'POST':
+        gym_class.delete()
+        return('staff_area')
+    
+    return render(request, 'delete_class.html', {'gym_class': gym_class})

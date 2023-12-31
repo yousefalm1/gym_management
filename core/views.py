@@ -144,4 +144,4 @@ def create_gym_class(request):
     else:
         form = GymClassForm()
 
-    return render('create_gym_class.html', {'form': form})
+    return render(request, 'create_gym_class.html', {'form': form})

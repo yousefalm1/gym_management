@@ -51,7 +51,14 @@
           <a class="nav-link mx-2" href="{% url 'classes' %}">Classes</a>
         </li>
 
+
         {% if user.is_authenticated %}
+          {% if user.is_superuser or user.is_staff %}
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="{% url 'staff_area' %}">Staff</a>
+            </li>
+          {% endif %}
+
         <li class="nav-item">
           <a class="nav-link mx-2 {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}">Logout</a>
         </li>

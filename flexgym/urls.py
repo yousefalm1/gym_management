@@ -25,6 +25,8 @@ urlpatterns = [
 
     path('edit_class/<int:class_id>/', edit_class, name ='edit_class'),
 
+    path('delete_class/<int:class_id>/', delete_class, name = 'delete_class')
+
 
     path('', index, name='index'),
 ] 

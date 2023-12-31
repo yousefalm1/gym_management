@@ -35,6 +35,9 @@
                 {% for gym_class in gym_classes %}
                 <li>
                     <strong>{{gym_class.class_name}}</strong>
+                    <a href="{% url 'edit_class' gym_class.class_id %}"> 
+                        <button>Edit Class</button>
+                    </a>
                     {% comment %} data-class-id to associate each "Show Users" button with a specific gym class  {% endcomment %}
                     <button class="showUsersBtn" data-class-id="{{ gym_class.class_id}}">Show Users</button>
                     <ul class="showUserList" style="display: none;">

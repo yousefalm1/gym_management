@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% block content %}
+
+    <h2><strong>Edit Class:</strong> {{gym_class.class_name}} </h2>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="sumbit">Save changes</button>
+    </form>
+
+{% endblock %}

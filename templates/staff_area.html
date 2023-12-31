@@ -11,6 +11,12 @@
                 <strong>Username:</strong> {{ user.username }}<br>
                 <strong>Email:</strong> {{ user.email }}<br>
                 <strong>Registration Date:</strong> {{ user.date_joined|date:"F d, Y" }}<br>
+                
+                {% if user.instructorprofile %}
+                    <strong> User Type:</strong> Instructor<br>
+                {% else %}
+                    <strong>User Type:</strong> Regular User<br>
+                {% endif %}
                 <a href="{% url 'delete_user' user.id %}">Delete</a><br>
                 <a href="{% url 'edit_membership' user.id %}"> Edit Membership </a><br>
                 <a href="{% url 'user_classes' user.id %}" > Classes Joined </a><br>

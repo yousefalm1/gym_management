@@ -65,8 +65,9 @@ def cancel_class(request, class_id):
 def staff_area(request):
     gym_classes = GymClasses.objects.all()
     users = User.objects.all()
+    instructor_profile = InstructorProfile.objects.all()
 
-    return render(request, 'staff_area.html', {'users': users, 'gym_classes':gym_classes})
+    return render(request, 'staff_area.html', {'users': users, 'gym_classes':gym_classes, 'instructor_profile':instructor_profile})
 
 
 def delete_user(request, user_id):
@@ -152,7 +153,7 @@ def edit_class(request, class_id):
 
     if request.method == 'POST':
         form = GymClassForm(request.POST, instance=gym_class)
-        if form.is_Valid():
+        if form.is_valid():
             form.save()
             return redirect('staff_area')
     else:
@@ -166,6 +167,8 @@ def delete_class(request, class_id):
 
     if request.method == 'POST':
         gym_class.delete()
-        return('staff_area')
+        return redirect('staff_area')
     
     return render(request, 'delete_class.html', {'gym_class': gym_class})
+
+

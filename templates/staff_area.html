@@ -51,6 +51,30 @@
             </ul>
     </div>
 
+    {% comment %} <div>
+        <button id="showInstructorBtn"> Show Instructors </button>
+        <ul id="instructorList" style="display: none;">
+            <h3> All Instructors </h3>
+            {% for instructor in instructors %}
+                <li>
+                    <strong>{{ instructor.display_name }} </strong>
+                </li>
+            {% endfor %}
+        </ul>
+    </div> {% endcomment %}
+
+    <ul>
+        <h3> All instructors </h3>
+        {% for instructor in instructor_profile %}
+            <li>
+                <h5> {{ instructor.display_name }} </h5>
+            </li>
+        {% endfor %}
+    </ul>
+        
+
+
+
     <div>
         <a href="{% url 'create_instructor_profile' %}">
             <button>Create New Instructor Profile </button>
@@ -74,6 +98,13 @@
             classList.style.display = (classList.style.display === 'none' ) ? 'block' : 'none';
         });
 
+
+
+        document.getElementById('showInstructorBtn').addEventListener('click', function (){
+            var instructorList = document.getElementById('instructorList');
+            instructorList.style.display = (instructorList.style.display === 'none') ? 'block' :'none';
+            
+        })
     {% comment %} selects all the elements with the class 'showUsersBtn' and then stores it in the classButtons variable {% endcomment %}
     var classButtons = document.querySelectorAll('.showUsersBtn');
 

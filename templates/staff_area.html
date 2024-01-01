@@ -58,7 +58,9 @@
             {% for instructor in instructor_profile %}
                 <li>
                     <strong>{{ instructor.display_name }} </strong>
-                    <a href="{% url 'edit_instructor' instructor.instructor.id %}">Edit Profile</a>
+                    <button>
+                        <a href="{% url 'edit_instructor' instructor.instructor.id %}">Edit Profile</a>
+                    </button>
 
                 </li>
             {% endfor %}

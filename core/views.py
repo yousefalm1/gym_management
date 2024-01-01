@@ -186,3 +186,13 @@ def edit_instructor(request, instructor_id):
         form = InstructorProfileForm(instance=instructor)
 
     return render(request, 'edit_instructor.html', {'form': form, 'instructor': instructor})
+
+
+def delete_instructor(request, instructor_id):
+    instructor = get_object_or_404(InstructorProfile, pk=instructor_id)
+
+    if request.method == 'POST':
+        instructor.delete()
+        return redirect("staff_area")
+    
+    return render(request, 'delete_class.html', {'instructor': instructor})

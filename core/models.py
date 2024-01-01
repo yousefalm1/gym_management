@@ -34,10 +34,7 @@ class InstructorProfile(models.Model):
     certification = models.TextField()
     display_name = models.CharField(max_length=100, default='Default Display Name')
     instructor_image = models.ImageField(upload_to='instructors_photo', null=True, blank=True)
-
-
-
-
+    
     def __str__(self):
         return self.instructor.username
 

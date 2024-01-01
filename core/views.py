@@ -152,7 +152,7 @@ def edit_class(request, class_id):
     gym_class = get_object_or_404(GymClasses, pk=class_id)
 
     if request.method == 'POST':
-        form = GymClassForm(request.POST, instance=gym_class)
+        form = GymClassForm(request.POST, request.FILES, instance=gym_class)
         if form.is_valid():
             form.save()
             return redirect('staff_area')
@@ -175,14 +175,14 @@ def delete_class(request, class_id):
 
 
 def edit_instructor(request, instructor_id):
-    instructor = get_object_or_404(InstructorProfile, instructor__id=instructor_id) 
+    instructor = get_object_or_404(InstructorProfile, pk=instructor_id) 
 
     if request.method == 'POST':
-        form = InstructorProfileForm(request.POST, request.FIles, instance=instructor)
+        form = InstructorProfileForm(request.POST, request.FILES, instance=instructor)
         if form.is_valid():
             form.save()
-            return redirect('instructors')
+            return redirect('staff_area')
     else:
         form = InstructorProfileForm(instance=instructor)
 
-    return render(request, 'edit_instructor_profile.html', {'instructor': instructor})
+    return render(request, 'edit_instructor.html', {'form': form, 'instructor': instructor})

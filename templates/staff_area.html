@@ -51,27 +51,19 @@
             </ul>
     </div>
 
-    {% comment %} <div>
+    <div>
         <button id="showInstructorBtn"> Show Instructors </button>
         <ul id="instructorList" style="display: none;">
             <h3> All Instructors </h3>
-            {% for instructor in instructors %}
+            {% for instructor in instructor_profile %}
                 <li>
                     <strong>{{ instructor.display_name }} </strong>
                 </li>
             {% endfor %}
         </ul>
-    </div> {% endcomment %}
+    </div> 
 
-    <ul>
-        <h3> All instructors </h3>
-        {% for instructor in instructor_profile %}
-            <li>
-                <h5> {{ instructor.display_name }} </h5>
-            </li>
-        {% endfor %}
-    </ul>
-        
+   
 
 
 
@@ -99,12 +91,19 @@
         });
 
 
-
+        {% comment %}  line 1 : selects the element with this id and adds a clicl event listener to the button and when the button is clicked it adds the function inside the {} will be excuted  
+        line 2: then it selects the element with the id instructorlist and assigns it to the instructorList variable it repsents the ul element
+        line3 :t hen it gets the current value of the display css property of the instructorList 
+        then checks if the current 'display property is 'none' 
+        then it checks with a ternary operator if the dispay is true ('none') it sets the style to block, otherwise it sets it to 'none'
+        {% endcomment %}
         document.getElementById('showInstructorBtn').addEventListener('click', function (){
             var instructorList = document.getElementById('instructorList');
             instructorList.style.display = (instructorList.style.display === 'none') ? 'block' :'none';
             
         })
+
+
     {% comment %} selects all the elements with the class 'showUsersBtn' and then stores it in the classButtons variable {% endcomment %}
     var classButtons = document.querySelectorAll('.showUsersBtn');
 

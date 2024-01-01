@@ -172,3 +172,17 @@ def delete_class(request, class_id):
     return render(request, 'delete_class.html', {'gym_class': gym_class})
 
 
+
+
+def edit_instructor(request, instructor_id):
+    instructor = get_object_or_404(InstructorProfile, instructor__id=instructor_id) 
+
+    if request.method == 'POST':
+        form = InstructorProfileForm(request.POST, request.FIles, instance=instructor)
+        if form.is_valid():
+            form.save()
+            return redirect('instructors')
+    else:
+        form = InstructorProfileForm(instance=instructor)
+
+    return render(request, 'edit_instructor_profile.html', {'instructor': instructor})

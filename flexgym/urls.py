@@ -3,7 +3,7 @@ from django.conf.urls.static import static
 
 from django.contrib import admin
 from django.urls import path,include
-from core.views import index, instructors, classes, join_class, profile, cancel_class, staff_area, delete_user, edit_membership, user_classes, add_user_to_class, create_instructor_profile, create_gym_class, edit_class, delete_class, edit_instructor, delete_instructor
+from core.views import index, instructors, classes, join_class, profile, cancel_class, staff_area, delete_user, edit_membership, user_classes, add_user_to_class, create_instructor_profile, create_gym_class, edit_class, delete_class, edit_instructor, delete_instructor, create_instructor_confirmation
 
 
 urlpatterns = [
@@ -28,6 +28,8 @@ urlpatterns = [
 
     path('edit_instructor/<int:instructor_id>/',edit_instructor , name='edit_instructor'),
     path('delete_instructor/<int:instructor_id>/', delete_instructor, name= 'delete_instructor'),
+
+    path('create_instructor_confirmation/', create_instructor_confirmation, name='create_instructor_confirmation'),
 
     path('', index, name='index'),
 ] 

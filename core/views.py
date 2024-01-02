@@ -152,7 +152,7 @@ def create_gym_class(request):
 
 
 def create_class_confirmation(request):
-    return render('request, create_class_confirmation.html')
+    return render(request, 'create_class_confirmation.html')
 
 def edit_class(request, class_id):
     gym_class = get_object_or_404(GymClasses, pk=class_id)

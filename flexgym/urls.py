@@ -24,7 +24,7 @@ urlpatterns = [
     path("create_instructor_confirmation/", create_instructor_confirmation, name="create_instructor_confirmation"),
 
     path('create_gym_class/', create_gym_class, name='create_gym_class'),
-    path("create_class_confirmation/", create_class_confirmation , name="create_class_confirmation")
+    path("create_class_confirmation/", create_class_confirmation , name="create_class_confirmation"),
 
     path('edit_class/<int:class_id>/', edit_class, name ='edit_class'),
     path('delete_class/<int:class_id>/', delete_class, name = 'delete_class'),

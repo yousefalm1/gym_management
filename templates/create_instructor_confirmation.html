@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content%}
+    <h2> Instructor Profile Created </h2>
+    <p>The instructor profile for {{ instructor_profile.display_name }} has been successfully created.</p>
+    <button>
+        <a href="{% url 'staff_area' %}"> Back to Staff Area </a>
+    <button>
+{% endblock %}
+

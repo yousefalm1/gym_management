@@ -144,12 +144,15 @@ def create_gym_class(request):
         form = GymClassForm(request.POST, request.FILES)
         if form.is_valid():
             gym_class = form.save()
-            return redirect('staff_area')
+            return render(request, 'create_class_confirmation.html', {'gym_class': gym_class})
     else:
         form = GymClassForm()
 
     return render(request, 'create_gym_class.html', {'form': form})
 
+
+def create_class_confirmation(request):
+    return render('request, create_class_confirmation.html')
 
 def edit_class(request, class_id):
     gym_class = get_object_or_404(GymClasses, pk=class_id)
@@ -200,4 +203,6 @@ def delete_instructor(request, instructor_id):
         return redirect("staff_area")
     
     return render(request, 'delete_class.html', {'instructor': instructor})
+
+
 

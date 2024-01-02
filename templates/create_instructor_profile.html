@@ -6,6 +6,6 @@
     {% csrf_token %}
     {% comment %} renders the form field as paragraphs {% endcomment %}
     {{ form.as_p }}
-    <button type="submit" >Create Profile</button>
+    <button type="submit" onclick="return confirm('Are you sure you want to create this instructor profile?')" >Create Profile</button>
 </form>
 {% endblock %}

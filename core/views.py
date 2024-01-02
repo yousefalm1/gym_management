@@ -119,7 +119,8 @@ def add_user_to_class(request, user_id):
     return render(request, 'add_user_to_class.html', {'user':user, 'gym_classes': gym_classes})
 
 
- 
+
+@login_required 
 def create_instructor_profile(request):
     # checks if the request method is a post request
     if request.method == 'POST':
@@ -127,7 +128,7 @@ def create_instructor_profile(request):
         form  = InstructorProfileForm(request.POST, request.FILES)
         if form.is_valid():
             instructor_profile = form.save()
-            return redirect('create_instructor_confirmation')
+            return redirect('staff_area')
     else:
         # if the request is not POST it creates a new InstructorProfileForm to display an empty form to the user.
         form = InstructorProfileForm()
@@ -140,7 +141,7 @@ def create_gym_class(request):
         form = GymClassForm(request.POST, request.FILES)
         if form.is_valid():
             gym_class = form.save()
-            return redirect('staff_area')
+            return redirect(request, 'create_instructor_confirmation.html', {'instructor_profile': create_instructor_profile})
     else:
         form = GymClassForm()
 
@@ -195,3 +196,4 @@ def delete_instructor(request, instructor_id):
         return redirect("staff_area")
     
     return render(request, 'delete_class.html', {'instructor': instructor})
+

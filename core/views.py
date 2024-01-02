@@ -128,7 +128,8 @@ def create_instructor_profile(request):
         form  = InstructorProfileForm(request.POST, request.FILES)
         if form.is_valid():
             instructor_profile = form.save()
-            return redirect('staff_area')
+            return redirect(request, 'create_instructor_confirmation.html', {'instructor_profile': create_instructor_profile})
+
     else:
         # if the request is not POST it creates a new InstructorProfileForm to display an empty form to the user.
         form = InstructorProfileForm()
@@ -141,7 +142,7 @@ def create_gym_class(request):
         form = GymClassForm(request.POST, request.FILES)
         if form.is_valid():
             gym_class = form.save()
-            return redirect(request, 'create_instructor_confirmation.html', {'instructor_profile': create_instructor_profile})
+            return redirect('staff_area')
     else:
         form = GymClassForm()
 

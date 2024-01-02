@@ -127,7 +127,7 @@ def create_instructor_profile(request):
         form  = InstructorProfileForm(request.POST, request.FILES)
         if form.is_valid():
             instructor_profile = form.save()
-            return redirect('request', 'create_instructor_confirmation.html', {'instructor_profile': instructor_profile  })
+            return redirect('create_instructor_confirmation')
     else:
         # if the request is not POST it creates a new InstructorProfileForm to display an empty form to the user.
         form = InstructorProfileForm()

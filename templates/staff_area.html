@@ -23,6 +23,12 @@
                 <a href="{% url 'edit_membership' user.id %}"> Edit Membership </a><br>
                 <a href="{% url 'user_classes' user.id %}" > Classes Joined </a><br>
                 <a href="{% url 'add_user_to_class' user.id %}" > Add to a Class</a>
+
+                <div>
+                    <a href="{%url 'edit_user' user.id %}">
+                        <button> Edit User </button>
+                    </a>
+                </div>
             </li>
             {% endfor %}
         </ul>
@@ -72,8 +78,10 @@
         </ul>
     </div> 
 
+
+  
    
-    <div>
+  <div>
         <a href="{% url 'create_instructor_profile' %}">
             <button>Create New Instructor Profile </button>
         </a>

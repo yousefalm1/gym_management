@@ -1,8 +1,8 @@
 {% extends 'base.html'%}
 {% block content %}
     <h2> User Deleted </h2>
-    <p> The user {{ user.username }} has been successfully deleted </p>
+    <p> The user <strong>{{ user.username }}</strong> has been successfully deleted </p>
     <button>
-        <a href="{% url 'staff_area' %}">Staff Area </a>
+        <a href="{% url 'staff_area' %}">Back to Staff Area </a>
     </button>
 {% endblock %}

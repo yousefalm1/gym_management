@@ -169,6 +169,26 @@ def create_gym_class(request):
 def create_class_confirmation(request):
     return render(request, 'create_class_confirmation.html')
 
+
+def edit_user(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+
+    if request.method == 'POST':
+        form = UserForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect('edit')
+    else:
+        form = UserForm(instance=user)
+    
+    return render(request, 'edit_user.html', {'form': form, 'user': user})
+
+
+
+def edit_user_confirmation(request):
+    return render(request, 'edit_user_confirmation.html')
+
+
 def edit_class(request, class_id):
     gym_class = get_object_or_404(GymClasses, pk=class_id)
 
@@ -220,15 +240,3 @@ def delete_instructor(request, instructor_id):
     return render(request, 'delete_class.html', {'instructor': instructor})
 
 
-def edit_user(request, user_id):
-    user = get_object_or_404(User, id=user_id)
-
-    if request.method == 'POST':
-        form = UserForm(request.POST, instance=user)
-        if form.is_valid():
-            form.save()
-            return redirect('staff_area')
-    else:
-        form = UserForm(instance=user)
-    
-    return render(request, 'edit_user.html', {'form': form, 'user': user})

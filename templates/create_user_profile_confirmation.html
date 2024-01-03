@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content%}
+    <h2> User Profile Created </h2>
+    <p>The user profile for {{ user_profile.user.username }} has been successfully created.</p>
+    <button>
+        <a href="{% url 'staff_area' %}"> Back to Staff Area </a>
+    </button>
+{% endblock %}

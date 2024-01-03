@@ -17,5 +17,5 @@ class GymClassForm(forms.ModelForm):
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
-        Model = UserProfile
+        model = UserProfile
         fields = ['user', 'membership_choices', 'join_date', 'new_membership_purchase']

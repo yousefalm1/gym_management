@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth.models import User
 from .models import GymClasses, UserProfile, InstructorProfile
-from .forms import InstructorProfileForm, GymClassForm
+from .forms import InstructorProfileForm, GymClassForm, UserProfileForm
 
 
 
@@ -76,11 +76,6 @@ def delete_user(request, user_id):
     return render(request, 'delete_user_confirmation.html', {'user': user})
 
 
-
-
-
-
-@login_required
 def edit_membership(request, user_id):
     user = get_object_or_404(User, id=user_id)
     user_profile = get_object_or_404(UserProfile, user=user )
@@ -143,6 +138,19 @@ def create_instructor_profile(request):
 
 def create_instructor_confirmation(request):
     return render(request, 'create_instructor_confirmation.html')
+
+
+def create_user_profile(request):
+    if request.method =='POST':
+        form = UserProfileForm(request.POST)
+        if form.is_valid():
+            user_profile = form.save()
+            return render(request, 'create_user_profile_confirmation.html', {'user_profile': user_profile})
+
+
+
+
+
 
 def create_gym_class(request):
     if request.method == 'POST':
@@ -208,6 +216,5 @@ def delete_instructor(request, instructor_id):
         return redirect("staff_area")
     
     return render(request, 'delete_class.html', {'instructor': instructor})
-
 
 

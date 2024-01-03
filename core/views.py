@@ -73,7 +73,12 @@ def staff_area(request):
 def delete_user(request, user_id):
     user = get_object_or_404(User, id=user_id)
     user.delete()
-    return redirect('staff_area')
+    return render(request, 'delete_user_confirmation.html', {'user': user})
+
+
+
+
+
 
 @login_required
 def edit_membership(request, user_id):

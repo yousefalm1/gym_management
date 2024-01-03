@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth.models import User
 from .models import GymClasses, UserProfile, InstructorProfile
-from .forms import InstructorProfileForm, GymClassForm, UserProfileForm
+from .forms import InstructorProfileForm, GymClassForm, UserProfileForm, UserForm
 
 
 
@@ -220,3 +220,15 @@ def delete_instructor(request, instructor_id):
     return render(request, 'delete_class.html', {'instructor': instructor})
 
 
+def edit_user(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+
+    if request.method == 'POST':
+        form = UserForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect('staff_area')
+    else:
+        form = UserForm(instance=user)
+    
+    return render(request, 'edit_user.html', {'form': form, 'user': user})

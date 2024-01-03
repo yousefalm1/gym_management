@@ -3,7 +3,7 @@ from django.conf.urls.static import static
 
 from django.contrib import admin
 from django.urls import path,include
-from core.views import index, instructors, classes, join_class, profile, cancel_class, staff_area, delete_user, edit_membership, user_classes, add_user_to_class, create_instructor_profile, create_gym_class, edit_class, delete_class, edit_instructor, delete_instructor,create_instructor_confirmation, create_class_confirmation
+from core.views import index, instructors, classes, join_class, profile, cancel_class, staff_area, delete_user, edit_membership, user_classes, add_user_to_class, create_instructor_profile, create_gym_class, edit_class, delete_class, edit_instructor, delete_instructor,create_instructor_confirmation, create_class_confirmation, create_user_profile
 
 
 urlpatterns = [
@@ -16,7 +16,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('staff/',staff_area, name='staff_area' ),
     path('delete_user/<int:user_id>/', delete_user, name='delete_user'),
+
+
     path('edit_membership/<int:user_id>/', edit_membership, name='edit_membership'),
+
+
     path('user_classes/<int:user_id>/', user_classes, name='user_classes'),
     path('add_user_to_class/<int:user_id>/', add_user_to_class, name="add_user_to_class"),
 
@@ -32,6 +36,9 @@ urlpatterns = [
     path('edit_instructor/<int:instructor_id>/',edit_instructor , name='edit_instructor'),
     path('delete_instructor/<int:instructor_id>/', delete_instructor, name= 'delete_instructor'),
     
+    path('create_user_profile/', create_user_profile, name='create_user_profile'),
+
+
 
     path('', index, name='index'),
 ] 

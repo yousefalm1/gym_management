@@ -128,7 +128,6 @@ def create_instructor_profile(request):
         if form.is_valid():
             instructor_profile = form.save()
             return render(request, 'create_instructor_confirmation.html', {'instructor_profile': instructor_profile})
-
     else:
         # if the request is not POST it creates a new InstructorProfileForm to display an empty form to the user.
         form = InstructorProfileForm()
@@ -146,7 +145,10 @@ def create_user_profile(request):
         if form.is_valid():
             user_profile = form.save()
             return render(request, 'create_user_profile_confirmation.html', {'user_profile': user_profile})
+    else:
+        form = UserProfileForm()
 
+    return render(request, 'create_user_profile.html', {'form': form})
 
 
 

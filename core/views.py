@@ -177,12 +177,11 @@ def edit_user(request, user_id):
         form = UserForm(request.POST, instance=user)
         if form.is_valid():
             form.save()
-            return redirect('edit')
+            return redirect('edit_user_confirmation')
     else:
         form = UserForm(instance=user)
     
     return render(request, 'edit_user.html', {'form': form, 'user': user})
-
 
 
 def edit_user_confirmation(request):

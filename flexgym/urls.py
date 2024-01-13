@@ -29,7 +29,6 @@ urlpatterns = [
     path('add_user_to_class/<int:user_id>/', add_user_to_class, name="add_user_to_class"),
 
     path('create_instructor_profile/', create_instructor_profile, name='create_instructor_profile'),
-    path("create_instructor_confirmation/", create_instructor_confirmation, name="create_instructor_confirmation"),
 
     path('create_gym_class/', create_gym_class, name='create_gym_class'),
     path("create_class_confirmation/", create_class_confirmation , name="create_class_confirmation"),

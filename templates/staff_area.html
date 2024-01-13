@@ -59,61 +59,71 @@
     </div>
   </div>
 
-  <div class="mb-4">
-    <button id="showClassesBtn" class="btn btn-primary">Show Classes</button>
-    <ul id="classList" style="display: none">
-      <h3>All Classes</h3>
-      {% for gym_class in gym_classes %}
-      <li>
-        <strong>{{gym_class.class_name}}</strong>
-        <a href="{% url 'edit_class' gym_class.class_id %}">
-          <button>Edit Class</button>
-        </a>
-        {% comment %} data-class-id to associate each "Show Users" button with a
-        specific gym class {% endcomment %}
-        <button class="showUsersBtn" data-class-id="{{ gym_class.class_id}}">
-          Show Users
-        </button>
-        <ul class="showUserList" style="display: none">
-          {% comment %} iterate over the users in the class then displays them
-          {% endcomment %} {% for user_in_class in gym_class.users.all %}
-          <li>{{ user_in_class.username}}</li>
-          {% endfor %}
-        </ul>
-      </li>
-      {% endfor%}
-    </ul>
-  </div>
 
   <div class="mb-4">
-    <button id="showInstructorBtn" class="btn btn-primary">
-      Show Instructors
-    </button>
-    <ul id="instructorList" style="display: none">
-      <h3>All Instructors</h3>
-      {% for instructor in instructor_profile %}
-      <li>
-        <strong>{{ instructor.display_name }} </strong>
-        <button>
-          <a href="{% url 'edit_instructor' instructor.id %}">Edit Profile</a>
-        </button>
-        <form
-          method="post"
-          action="{% url 'delete_instructor' instructor.id %}"
-          style="display: inline"
-        >
-          {% csrf_token %}
-          <button
-            type="submit"
-            onclick="return confirm('Are you sure you want to delete this instructor profile?')"
-          >
-            Delete
-          </button>
-        </form>
-      </li>
-      {% endfor %}
+    <button id="showClassesBtn" class="btn btn-primary">Show Classes</button>
+    <ul id="classList" class="list-group mt-3" style="display: none">
+        <h3 class="mb-3">All Classes</h3>
+        {% for gym_class in gym_classes %}
+        <li class=" list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+                <strong>{{gym_class.class_name}}</strong>
+                <div>
+                    <a href="{% url 'edit_class' gym_class.class_id %}" class="btn btn-warning btn-sm mr-2">
+                        Edit Class
+                    </a>
+                    {% comment %} data-class-id to associate each "Show Users" button with a specific gym class {% endcomment %}
+                    <button class="showUsersBtn btn btn-info btn-sm" data-class-id= "{{ gym_class.class_id }}">
+                        Show users
+                    </button>
+                </div>
+            </div>
+            <ul class="showUserList mt-2" style="display: none">
+                {% for user_in_class in gym_class.users.all %}
+                <li>{{ user_in_class.username}}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor%}
     </ul>
-  </div>
+</div>
+
+
+
+
+<div class="mb-4">
+    <button id="showInstructorBtn" class="btn btn-primary">
+        Show Instructors
+    </button>
+    <ul id="instructorList" class="list-group" style="display: none">
+        <h3 class="mt-3">All Instructors</h3>
+        {% for instructor in instructor_profile %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <strong>{{ instructor.display_name }} </strong>
+            <div>
+                <a href="{% url 'edit_instructor' instructor.id %}" class="btn btn-warning btn-sm mr-2">
+                    Edit Profile
+                </a>
+                <form method="post" action="{% url 'delete_instructor' instructor.id %}" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this instructor profile?')">
+                        Delete
+                    </button>
+                </form>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+            
+
+
+
+
+            
+
+
 
   <div class="mb-4">
     <a href="{% url 'create_instructor_profile' %}">

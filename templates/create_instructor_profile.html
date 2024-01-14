@@ -1,11 +1,17 @@
 {% extends 'base.html'%}
 {% block content %}
 
-<h2><strong>Create New Instructor Profile</strong></h2>
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {% comment %} renders the form field as paragraphs {% endcomment %}
-    {{ form.as_p }}
-    <button type="submit" onclick="return confirm('Are you sure you want to create this instructor profile?')" >Create Profile</button>
-</form>
+<div class="container mt-2">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2><strong>Create New Instructor Profile</strong></h2>
+        <form method="post" enctype="multipart/form-data" class="needs-validation">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure you want to create this instructor profile?')">Create Profile</button>
+        </form>
+      </div>
+    </div>
+  </div>
 {% endblock %}
+ 

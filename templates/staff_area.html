@@ -1,178 +1,144 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
+
+
 
 <div class="container mt-4">
-  <h2 class="mb-4">Staff Area</h2>
+  <h2 class="mb-4 text-center">Staff Area</h2>
 
-  <div class="mb-4">
-    <button id="showUsersBtn" class="btn btn-primary">Show Users</button>
-
-    <div id="userList" style="display: none" class="mt-3">
-      <h3>All Users</h3>
-      <ul class="list-group">
-        {% for user in users %}
-        <li class="list-group-item">
-          <strong>Username:</strong> {{ user.username }}<br />
-          <strong>Email:</strong> {{ user.email }}<br />
-          <strong>Registration Date:</strong> {{ user.date_joined|date:"F d,Y"}}<br />
-
-          {% if user.instructorprofile %}
-          <strong> User Type:</strong> Instructor <br />
-          {% else %}
-          <strong>User Type:</strong> Member <br />
-          {% endif %}
-          <div class="mt-3">
-            <button
-              class="btn btn-danger"
-              onclick="return confirm('Are you sure you want to delete this user?')"
-            >
-              <a href="{% url 'delete_user' user.id %}" class="text-white"
-                >Delete</a
-              >
-            </button>
-            <a
-              href="{% url 'user_classes' user.id %}"
-              class="btn btn-info mt-2"
-            >
-              Classes Joined </a
-            >
-            <a
-              href="{% url 'add_user_to_class' user.id %}"
-              class="btn btn-success mt-2"
-            >
-              Add to a Class</a
-            >
+  <div class="row">
+      <div class="col-md-4">
+          <button id="showUsersBtn" class="btn btn-primary btn-block mb-4">Show Users</button>
+          <div id="userList" style="display: none;">
+              <h3 class="mt-4">All Users</h3>
+              <ul class="list-group">
+                  {% for user in users %}
+                  <li class="list-group-item">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <strong>Username:</strong> {{ user.username }}<br>
+                              <strong>Email:</strong> {{ user.email }}<br>
+                              <strong>Registration Date:</strong> {{ user.date_joined|date:"F d, Y" }}<br>
+                              {% if user.instructorprofile %}
+                                  <strong> User Type:</strong> Instructor <br>
+                              {% else %}
+                                  <strong>User Type:</strong> Member <br>
+                              {% endif %}
+                          </div>
+                          <div class="col-md-6">
+                              <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">
+                                  <a href="{% url 'delete_user' user.id %}" class="text-white text-decoration-none">Delete</a>
+                              </button>
+                              <a href="{% url 'edit_membership' user.id %}" class="btn btn-warning"> Edit Membership </a>
+                              <a href="{% url 'user_classes' user.id %}" class="btn btn-info"> Classes Joined </a>
+                              <a href="{% url 'add_user_to_class' user.id %}" class="btn btn-success"> Add to a Class</a>
+                              <a href="{%url 'edit_user' user.id %}" class="btn btn-secondary">Edit User </a>
+                          </div>
+                      </div>
+                  </li>
+                  {% endfor %}
+              </ul>
           </div>
+      </div>
 
-          <div class="mt-2">
-            <a href="{%url 'edit_user' user.id %}" class="btn btn-warning">
-              Edit User
-            </a> <a
-            href="{% url 'edit_membership' user.id %}"
-            class="btn btn-warning mt-2"
-          >
-            Edit Membership </a
-          >
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
+      <div class="col-md-4">
+          <button id="showClassesBtn" class="btn btn-primary btn-block mb-4">Show Classes</button>
+          <ul id="classList" class="list-group" style="display: none;">
+              <h3 class="mt-3">All Classes</h3>
+              {% for gym_class in gym_classes %}
+              <li class="list-group-item">
+                  <strong>{{ gym_class.class_name }}</strong>
+                  <a href="{% url 'edit_class' gym_class.class_id %}" class="btn btn-warning btn-sm ">Edit Class</a>
+                  <button class="btn btn-info showUsersBtn btn-sm" data-class-id="{{ gym_class.class_id }}">Show Users</button>
+                  <ul class="list-group showUserList" style="display: none;">
+                      {% for user_in_class in gym_class.users.all %}
+                      <li class="list-group-item">{{ user_in_class.username }}</li>
+                      {% endfor %}
+                  </ul>
+              </li>
+              {% endfor %}
+          </ul>
+      </div>
+
+      <div class="col-md-4">
+          <button id="showInstructorBtn" class="btn btn-primary btn-block mb-4">Show Instructors</button>
+          <ul id="instructorList" class="list-group" style="display: none;">
+              <h3 class="mt-3">All Instructors</h3>
+              {% for instructor in instructor_profile %}
+              <li class="list-group-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                      <strong>{{ instructor.display_name }}</strong>
+                      <div class="btn-group" role="group">
+                          <button class="btn btn-warning btn-sm">
+                              <a href="{% url 'edit_instructor' instructor.id %}" class="text-white">Edit Profile</a>
+                          </button>
+                          <form method="post" action="{% url 'delete_instructor' instructor.id %}" style="display: inline;">
+                              {% csrf_token %}
+                              <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this instructor profile?')">Delete</button>
+                          </form>
+                      </div>
+                  </div>
+              </li>
+              {% endfor %}
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <a href="{% url 'create_instructor_profile' %}" class="btn btn-success btn-block mb-4">Create New Instructor Profile</a>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'create_user_profile' %}" class="btn btn-success btn-block mb-4">Create New User Profile</a>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'create_gym_class' %}" class="btn btn-success btn-block mb-4">Create New Class</a>
+        </div>
     </div>
-  </div>
-
-
-  <div class="mb-4">
-    <button id="showClassesBtn" class="btn btn-primary">Show Classes</button>
-    <ul id="classList" class="list-group mt-3" style="display: none">
-        <h3 class="mb-3">All Classes</h3>
-        {% for gym_class in gym_classes %}
-        <li class=" list-group-item">
-            <div class="d-flex justify-content-between align-items-center">
-                <strong>{{gym_class.class_name}}</strong>
-                <div>
-                    <a href="{% url 'edit_class' gym_class.class_id %}" class="btn btn-warning btn-sm mr-2">
-                        Edit Class
-                    </a>
-                    {% comment %} data-class-id to associate each "Show Users" button with a specific gym class {% endcomment %}
-                    <button class="showUsersBtn btn btn-info btn-sm" data-class-id= "{{ gym_class.class_id }}">
-                        Show users
-                    </button>
-                </div>
-            </div>
-            <ul class="showUserList mt-2" style="display: none">
-                {% for user_in_class in gym_class.users.all %}
-                <li>{{ user_in_class.username}}</li>
-                {% endfor %}
-            </ul>
-        </li>
-        {% endfor%}
-    </ul>
 </div>
+   
+    <script>
+        document.getElementById('showUsersBtn').addEventListener('click', function () {
+            document.getElementById('userList').style.display = (userList.style.display === 'none') ? 'block' : 'none';
+        });
+
+        document.getElementById('showClassesBtn').addEventListener('click', function () {
+            var classList = document.getElementById('classList');
+            classList.style.display = (classList.style.display === 'none' ) ? 'block' : 'none';
+        });
 
 
+        {% comment %}  line 1 : selects the element with this id and adds a clicl event listener to the button and when the button is clicked it adds the function inside the {} will be excuted  
+        line 2: then it selects the element with the id instructorlist and assigns it to the instructorList variable it repsents the ul element
+        line3 :t hen it gets the current value of the display css property of the instructorList 
+        then checks if the current 'display property is 'none' 
+        then it checks with a ternary operator if the dispay is true ('none') it sets the style to block, otherwise it sets it to 'none'
+        {% endcomment %}
+        document.getElementById('showInstructorBtn').addEventListener('click', function (){
+            var instructorList = document.getElementById('instructorList');
+            instructorList.style.display = (instructorList.style.display === 'none') ? 'block' :'none';
+            
+        })
 
 
-<div class="mb-4">
-    <button id="showInstructorBtn" class="btn btn-primary">
-        Show Instructors
-    </button>
-    <ul id="instructorList" class="list-group" style="display: none">
-        <h3 class="mt-3">All Instructors</h3>
-        {% for instructor in instructor_profile %}
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            <strong>{{ instructor.display_name }} </strong>
-            <div>
-                <a href="{% url 'edit_instructor' instructor.id %}" class="btn btn-warning btn-sm mr-2">
-                    Edit Profile
-                </a>
-                <form method="post" action="{% url 'delete_instructor' instructor.id %}" style="display: inline;">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this instructor profile?')">
-                        Delete
-                    </button>
-                </form>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+    {% comment %} selects all the elements with the class 'showUsersBtn' and then stores it in the classButtons variable {% endcomment %}
+    var classButtons = document.querySelectorAll('.showUsersBtn');
 
-  <div class="mb-4">
-    <a href="{% url 'create_instructor_profile' %}">
-      <button class="btn btn-success">Create New Instructor Profile</button>
-    </a>
-  </div>
+    {% comment %} iterates thru each classButtons {% endcomment %}
+    {% comment %} then attaches a click event listener to each button {% endcomment %}
+    {% comment %} 'button.nextElementSibling;' means when the user clicks the show users btn it will refer to the element under it  {% endcomment %}
+    {% comment %} then it checks if the classlist style display is none it will change it to block to show the users and if the statement is false it will keep the none{% endcomment %}
+    classButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
 
-  <div class="mb-4">
-    <a href="{% url 'create_user_profile' %}">
-      <button class="btn btn-success">Create New User Profile</button>
-    </a>
-  </div>
+            var classUserList = button.nextElementSibling;
 
-  <div class="mb-4">
-    <a href="{% url 'create_gym_class' %}">
-      <button class="btn btn-success">Create New Class</button>
-    </a>
-  </div>
-</div>
+            classUserList.style.display = (classUserList.style.display === 'none') ? 'block' : 'none';
+        });
+    });
 
-<script>
-      document.getElementById('showUsersBtn').addEventListener('click', function () {
-          document.getElementById('userList').style.display = (userList.style.display === 'none') ? 'block' : 'none';
-      });
-
-      document.getElementById('showClassesBtn').addEventListener('click', function () {
-          var classList = document.getElementById('classList');
-          classList.style.display = (classList.style.display === 'none' ) ? 'block' : 'none';
-      });
-
-
-      {% comment %}  line 1 : selects the element with this id and adds a clicl event listener to the button and when the button is clicked it adds the function inside the {} will be excuted
-      line 2: then it selects the element with the id instructorlist and assigns it to the instructorList variable it repsents the ul element
-      line3 :t hen it gets the current value of the display css property of the instructorList
-      then checks if the current 'display property is 'none'
-      then it checks with a ternary operator if the dispay is true ('none') it sets the style to block, otherwise it sets it to 'none'
-      {% endcomment %}
-      document.getElementById('showInstructorBtn').addEventListener('click', function (){
-          var instructorList = document.getElementById('instructorList');
-          instructorList.style.display = (instructorList.style.display === 'none') ? 'block' :'none';
-
-      })
-
-
-  {% comment %} selects all the elements with the class 'showUsersBtn' and then stores it in the classButtons variable {% endcomment %}
-  var classButtons = document.querySelectorAll('.showUsersBtn');
-
-  {% comment %} iterates thru each classButtons {% endcomment %}
-  {% comment %} then attaches a click event listener to each button {% endcomment %}
-  {% comment %} 'button.nextElementSibling;' means when the user clicks the show users btn it will refer to the element under it  {% endcomment %}
-  {% comment %} then it checks if the classlist style display is none it will change it to block to show the users and if the statement is false it will keep the none{% endcomment %}
-  classButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
-
-          var classUserList = button.nextElementSibling;
-
-          classUserList.style.display = (classUserList.style.display === 'none') ? 'block' : 'none';
-      });
-  });
-</script>
+    </script>
 {% endblock %}

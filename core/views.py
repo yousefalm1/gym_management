@@ -201,6 +201,14 @@ def edit_class(request, class_id):
     
     return render(request, 'edit_class.html', {'form': form, 'gym_class': gym_class})
 
+def edit_class_confirmation(request):
+    return render(request, 'edit_class_confirmation.html')
+
+    
+
+
+
+
 
 def delete_class(request, class_id):
     gym_class = get_object_or_404(GymClasses, pk=class_id)

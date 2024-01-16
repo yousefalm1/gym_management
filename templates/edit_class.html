@@ -1,17 +1,18 @@
 {% extends 'base.html'%}
+{% load static %}
 {% block content %}
-
-    <h2><strong>Edit Class:</strong> {{gym_class.class_name}} </h2>
+<div class="container mt-4">
+    <h2 class="font-weight-bold"><strong>Edit Class:</strong> {{ gym_class.class_name }}</h2>
 
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <button class="btn btn-success" type="sumbit">Save changes</button>
+        <button class="btn btn-success" type="submit">Save Changes</button>
     </form>
 
-    <form method="post" action="{% url 'delete_class' gym_class.class_id %}" style="margin-top: 20px">
+    <form method="post" action="{% url 'delete_class' gym_class.class_id %}">
         {% csrf_token %}
         <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure you want to delete this class?')">Delete Class</button>
     </form>
-
+</div>
 {% endblock %}

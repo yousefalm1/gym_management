@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
+    <div class="container mt-4 text-center">
+        <h2 class="font-weight-bold">Delete Gym Class: {{ gym_class.class_name }}</h2>
 
-    <h2><strong> Delete Gym Class: </strong> {{ gym_class.class_name }} </h2>
-    
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Yes, Delete </button>
-    </form>
-
+        <form method="post" class="mt-4">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        </form>
+        
+        <a href="{% url 'staff_area' %}" class="btn btn-secondary mt-3">Cancel</a>
+    </div>
 {% endblock %}

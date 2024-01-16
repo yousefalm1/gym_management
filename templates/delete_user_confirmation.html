@@ -1,8 +1,10 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
-    <h2> User Deleted </h2>
-    <p> The user <strong>{{ user.username }}</strong> has been successfully deleted </p>
-    <button>
-        <a href="{% url 'staff_area' %}">Back to Staff Area </a>
-    </button>
+    <div class="container mt-4 text-center vertical-center">
+        <h2 class="display-4">User Deleted</h2>
+        <p class="lead"> The user <strong>{{ user.username }}</strong> has been successfully deleted</p>
+        <a href="{% url 'staff_area' %}" class="btn btn-primary btn-sm">Back to Staff Area</a>
+    </div>
 {% endblock %}

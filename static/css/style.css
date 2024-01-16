@@ -83,30 +83,3 @@
 
 
 /* Create Class Confirmation Page */
-.vertical-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* form */
-.container {
-  max-width: 600px;
-  margin: auto;
-}
-
-h2 {
-  color: black;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-form {
-  margin-top: 20px;
-}
-
-.btn-success,
-.btn-danger {
-  width: 100%;
-  margin-top: 10px;
-}

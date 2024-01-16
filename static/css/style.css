@@ -79,3 +79,12 @@
     object-fit:cover;
   }
 
+
+
+
+/* Create Class Confirmation Page */
+.vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

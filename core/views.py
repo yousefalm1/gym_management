@@ -215,7 +215,8 @@ def delete_class(request, class_id):
 
     if request.method == 'POST':
         gym_class.delete()
-        return redirect('staff_area')
+        return render(request, 'delete_class_confirmation.html', {'class_id': class_id})
+
     
     return render(request, 'delete_class.html', {'gym_class': gym_class})
 

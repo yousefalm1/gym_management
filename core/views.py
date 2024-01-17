@@ -76,6 +76,22 @@ def delete_user(request, user_id):
     return render(request, 'delete_user_confirmation.html', {'user': user})
 
 
+def delete_class(request, class_id):
+    gym_class = get_object_or_404(GymClasses, pk=class_id)
+
+    if request.method == 'POST':
+        if gym_class:
+            gym_class.delete()
+            return redirect('delete_class_confirmation', class_id=class_id)
+
+
+    return render(request, 'delete_class_confirmation.html', {'gym_class': gym_class})
+
+
+def delete_class_confirmation(request, class_id):
+    # Your view logic here, e.g., fetching data related to the deleted class
+    return render(request, 'delete_class_confirmation.html', {'class_id': class_id})
+
 def edit_membership(request, user_id):
     user = get_object_or_404(User, id=user_id)
     user_profile = get_object_or_404(UserProfile, user=user )
@@ -195,27 +211,13 @@ def edit_class(request, class_id):
         form = GymClassForm(request.POST, request.FILES, instance=gym_class)
         if form.is_valid():
             form.save()
-            return redirect('edit_class_confirmation', {gym_class, 'gym_class'})
+            return redirect('staff_area')
     else:
         form = GymClassForm(instance=gym_class)
     
     return render(request, 'edit_class.html', {'form': form, 'gym_class': gym_class})
 
-def edit_class_confirmation(request):
-    return render(request, 'edit_class_confirmation.html')
 
-    
-
-
-def delete_class(request, class_id):
-    gym_class = get_object_or_404(GymClasses, pk=class_id)
-
-    if request.method == 'POST':
-        gym_class.delete()
-        return render(request, 'delete_class_confirmation.html', {'class_id': class_id})
-
-    
-    return render(request, 'delete_class.html', {'gym_class': gym_class})
 
 
 

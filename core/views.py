@@ -195,7 +195,7 @@ def edit_class(request, class_id):
         form = GymClassForm(request.POST, request.FILES, instance=gym_class)
         if form.is_valid():
             form.save()
-            return redirect('staff_area')
+            return redirect('edit_class_confirmation', {gym_class, 'gym_class'})
     else:
         form = GymClassForm(instance=gym_class)
     
@@ -205,9 +205,6 @@ def edit_class_confirmation(request):
     return render(request, 'edit_class_confirmation.html')
 
     
-
-
-
 
 
 def delete_class(request, class_id):

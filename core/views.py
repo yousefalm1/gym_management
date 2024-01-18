@@ -92,6 +92,9 @@ def delete_class_confirmation(request, class_id):
     # Your view logic here, e.g., fetching data related to the deleted class
     return render(request, 'delete_class_confirmation.html', {'class_id': class_id})
 
+
+
+
 def edit_membership(request, user_id):
     user = get_object_or_404(User, id=user_id)
     user_profile = get_object_or_404(UserProfile, user=user )
@@ -242,8 +245,21 @@ def delete_instructor(request, instructor_id):
 
     if request.method == 'POST':
         instructor.delete()
-        return redirect("staff_area")
+        return redirect("delete_instructor_confirmation")
     
     return render(request, 'delete_class.html', {'instructor': instructor})
+
+
+def delete_instructor_confirmation(request, instructor_id):
+    return render(request, 'delete_instructor_confirmation', {'instructor_id':instructor_id})
+    
+
+    
+
+
+
+
+
+ 
 
 

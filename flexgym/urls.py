@@ -28,6 +28,8 @@ urlpatterns = [
     path('user_classes/<int:user_id>/', user_classes, name='user_classes'),
     path('add_user_to_class/<int:user_id>/', add_user_to_class, name="add_user_to_class"),
 
+
+
     path('create_instructor_profile/', create_instructor_profile, name='create_instructor_profile'),
 
     path('create_gym_class/', create_gym_class, name='create_gym_class'),
@@ -35,7 +37,6 @@ urlpatterns = [
 
     path('edit_class/<int:class_id>/', edit_class, name ='edit_class'),
     path('delete_class/<int:class_id>/', delete_class, name = 'delete_class'),
-    path('delete_class_confirmation/<int:class_id>/', delete_class_confirmation, name='delete_class_confirmation'),
 
 
 

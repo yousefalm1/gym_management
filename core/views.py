@@ -133,12 +133,17 @@ def add_user_to_class(request, user_id):
         # Add the user to the selected gym class
         gym_class.users.add(user)
 
-        return redirect('staff_area')
+        return render(request, 'user_added_confirmation.html', {'user': user, 'gym_class': gym_class})
+
+
 
     return render(request, 'add_user_to_class.html', {'user':user, 'gym_classes': gym_classes})
 
 
 
+
+
+    
 def create_instructor_profile(request):
     # checks if the request method is a post request
     if request.method == 'POST':

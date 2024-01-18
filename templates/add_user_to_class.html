@@ -1,20 +1,22 @@
 {% extends 'base.html' %}
-    
+
 {% block content %}
-    <h2><Strong> Add user to class - </strong> {{user.username}} </h2>
-    <form method="post">
+<div class="container mt-5">
+    <h2 class="mb-4"><strong>Add User to Class - {{ user.username }}</strong></h2>
+
+    <form method="post" class="mt-3">
         {% csrf_token %}
-        {% comment %} creates a label for the dropdown menu {% endcomment %}
-        <label for="class_choice">Select Class:</label>
-        {% comment %} this loops thru all the gym classes and then creates each gym class as an option {% endcomment %}
-        <select name="class_choice" id="class_choice">
-            {% for gym_class in gym_classes %}
-            {% comment %} the class id is the value and the class name as the text that can be seen  {% endcomment %}
-                <option value=" {{ gym_class.class_id }}">{{gym_class.class_name}}</option>
-            {% endfor %}
-        </select>
-        <button type="submit">Add to Class</button>
+        
+        <div class="form-group">
+            <label for="class_choice">Select Class:</label>
+            <select name="class_choice" id="class_choice" class="form-control">
+                {% for gym_class in gym_classes %}
+                    <option value="{{ gym_class.class_id }}">{{ gym_class.class_name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Add to Class</button>
     </form>
-
-
+</div>
 {% endblock %}

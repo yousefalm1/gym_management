@@ -221,10 +221,6 @@ def edit_class(request, class_id):
     return render(request, 'edit_class.html', {'form': form, 'gym_class': gym_class})
 
 
-
-
-
-
 def edit_instructor(request, instructor_id):
     instructor = get_object_or_404(InstructorProfile, pk=instructor_id) 
 
@@ -244,18 +240,19 @@ def delete_instructor(request, instructor_id):
     instructor = get_object_or_404(InstructorProfile, pk=instructor_id)
 
     if request.method == 'POST':
-        instructor.delete()
-        return redirect("delete_instructor_confirmation")
+        if instructor:
+            instructor.delete()
+            return redirect("delete_instructor_confirmation")
     
-    return render(request, 'delete_class.html', {'instructor': instructor})
+    return render(request, 'delete_class.html', {'instructor_id': instructor_id})
+
 
 
 def delete_instructor_confirmation(request, instructor_id):
-    return render(request, 'delete_instructor_confirmation', {'instructor_id':instructor_id})
+    return render(request, 'delete_instructor_confirmation.html', {'instructor':instructor_id})
     
 
     
-
 
 
 

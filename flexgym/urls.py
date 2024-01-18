@@ -41,10 +41,9 @@ urlpatterns = [
 
     path('edit_instructor/<int:instructor_id>/',edit_instructor , name='edit_instructor'),
     path('delete_instructor/<int:instructor_id>/', delete_instructor, name= 'delete_instructor'),
-    path('delete_instructor_confirmation/<int:instructor_id>/', delete_instructor_confirmation, name= 'delete_instructor_confirmation')
-    
-    path('create_user_profile/', create_user_profile, name='create_user_profile'),
+    path('delete_instructor_confirmation/<int:instructor_id>/', delete_instructor_confirmation, name='delete_instructor_confirmation'),
 
+    path('create_user_profile/', create_user_profile, name='create_user_profile'),
 
 
     path('', index, name='index'),

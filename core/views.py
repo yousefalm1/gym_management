@@ -106,7 +106,6 @@ def edit_membership(request, user_id):
 
     return render(request, 'edit_membership.html', {'user_profile': user_profile})
 
-
 def user_classes(request, user_id):
     # retrieves a 'User' form the database based on the user_id
     user = get_object_or_404(User, id=user_id)

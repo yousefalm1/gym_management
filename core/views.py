@@ -95,6 +95,20 @@ def delete_class_confirmation(request, class_id):
 
 
 
+# def edit_membership(request, user_id):
+#     user = get_object_or_404(User, id=user_id)
+#     user_profile = get_object_or_404(UserProfile, user=user)
+
+#     if request.method == 'POST':
+#         new_membership_choice = request.POST.get('membership_choice')
+#         user_profile.membership_choices = new_membership_choice
+#         user_profile.save()
+
+#         # Redirect to the confirmation page
+#         return redirect('e', user_id=user.id)
+
+#     return render(request, 'edit_membership.html', {'user_profile': user_profile})
+
 def edit_membership(request, user_id):
     user = get_object_or_404(User, id=user_id)
     user_profile = get_object_or_404(UserProfile, user=user )
@@ -104,7 +118,16 @@ def edit_membership(request, user_id):
         user_profile.membership_choices = new_membership_choice
         user_profile.save()
 
+        return redirect('edit_membership_confirmation', user_id=user.id)
+
     return render(request, 'edit_membership.html', {'user_profile': user_profile})
+
+
+def edit_membership_confirmation(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    return render(request, 'edit_membership_confirmation.html', {'user': user})
+
+
 
 def user_classes(request, user_id):
     # retrieves a 'User' form the database based on the user_id

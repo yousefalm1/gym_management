@@ -9,24 +9,33 @@
 
 <header>
 
-  <!-- Background image -->
-  <div id="intro-example" class="p-5 text-center bg-image"
-    style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-white">
-          <h1 class="mb-3">Transform Your Body with FlexGym</h1>
-          <h5 class="mb-4">
-            Achieve Your Fitness Goals with Our Expert Instructors
-          </h5>
-          <a class="btn btn-outline-light btn-lg m-2" href="{% url 'classes' %}"
+  <div lc-helper="background" class="container-fluid py-5 mb-4 d-flex justify-content-center" style="background-image: url('https://www.hussle.com/blog/wp-content/uploads/2020/12/Gym-structure-1080x675.png');
+  background-position: center;
+background-size:cover;
+background-repeat:no-repeat">
+      <div class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12" style=" backdrop-filter: blur(6px) saturate(102%);
+  -webkit-backdrop-filter: blur(6px) saturate(102%);
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);">
+          <div class="lc-block">
+              <div editable="rich">
+                  <h2 class="fw-bolder display-3">Transform Your Body with FlexGym</h2>
+              </div>
+          </div>
+          <div class="lc-block col-md-8">
+              <div editable="rich">
+                  <p class="lead">Achieve Your Fitness Goals with Our Expert Instructors.
+                  </p>
+              </div>
+          </div>
+          <div class="lc-block">
+            <a class=" btn btn-outline-light btn-lg m-2" href="{% url 'classes' %}"
             role="button" rel="nofollow">Explore Classes</a>
-          <a class="btn btn-outline-light btn-lg m-2" href="https://mdbootstrap.com/docs/standard/"
-            target="_blank" role="button">Join Now</a>
-        </div>
+          </div>
       </div>
-    </div>
   </div>
+
 
   <section class="container mt-5">
     <div class="row align-items-center">
@@ -45,6 +54,10 @@
     </div>
   </section>
 
+
+
+
+  
   <section class="mt-5">
     <div class="row d-flex justify-content-center">
       <div class="col-md-10 col-xl-8 text-center">

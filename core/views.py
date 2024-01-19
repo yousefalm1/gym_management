@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseForbidden
 from django.urls import reverse
 
 from django.utils import timezone
@@ -113,11 +113,16 @@ def edit_membership(request, user_id):
     user = get_object_or_404(User, id=user_id)
     user_profile = get_object_or_404(UserProfile, user=user )
 
+    if user.is_staff:
+        return HttpResponseForbidden("You cannot edit the admin user's membership.")
+
+
     if request.method == 'POST':
         new_membership_choice = request.POST.get('membership_choice')
         user_profile.membership_choices = new_membership_choice
         user_profile.save()
 
+    
         return redirect('edit_membership_confirmation', user_id=user.id)
 
     return render(request, 'edit_membership.html', {'user_profile': user_profile})
@@ -269,16 +274,12 @@ def delete_instructor(request, instructor_id):
     if request.method == 'POST':
         if instructor:
             instructor.delete()
-            return redirect("delete_instructor_confirmation")
+            return redirect("delete_instructor_confirmation", instructor_id=instructor_id)
     
-    return render(request, 'delete_class.html', {'instructor_id': instructor_id})
-
-
+    return render(request, 'delete_instructor.html', {'instructor': instructor})
 
 def delete_instructor_confirmation(request, instructor_id):
-    return render(request, 'delete_instructor_confirmation.html', {'instructor':instructor_id})
-    
-
+    return render(request, 'delete_instructor_confirmation.html', {'instructor': instructor_id})
     
 
 

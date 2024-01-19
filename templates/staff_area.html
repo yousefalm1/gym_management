@@ -79,9 +79,7 @@
                   <div class="d-flex justify-content-between align-items-center">
                       <strong>{{ instructor.display_name }}</strong>
                       <div class="btn-group" role="group">
-                          <button class="btn btn-warning btn-sm">
-                              <a href="{% url 'edit_instructor' instructor.id %}" class="text-white">Edit Profile</a>
-                          </button>
+                        <a href="{% url 'edit_instructor' instructor.id %}" class="btn btn-warning btn-sm text-white" role="button">Edit Profile</a>
                           <form method="post" action="{% url 'delete_instructor' instructor.id %}" style="display: inline;">
                               {% csrf_token %}
                               <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this instructor profile?')">Delete</button>

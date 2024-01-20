@@ -33,8 +33,8 @@ class InstructorProfile(models.Model):
     specialization = models.CharField(max_length=50)
     certification = models.TextField()
     display_name = models.CharField(max_length=100, default='Default Display Name')
-    instructor_image = models.ImageField(upload_to='instructors_photo', null=True, blank=True)
-    
+    instructor_image = models.ImageField(upload_to='images/',null=True, blank=True)
+
     def __str__(self):
         return self.instructor.username
 

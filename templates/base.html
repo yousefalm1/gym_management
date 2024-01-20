@@ -26,7 +26,7 @@
  
   </head>
   
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     
 <!-- Nav -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
@@ -80,8 +80,7 @@
 
 
 
-
-    <div>{%block content %} {% endblock %}</div>
+    <div class="flex-grow-1">{%block content %} {% endblock %}</div>
 
     <!-- Footer -->
     <footer class="bg-dark text-center   ">

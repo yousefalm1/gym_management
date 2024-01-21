@@ -1,11 +1,10 @@
-
 {% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
     <div class="container mt-4 text-center vertical-center">
-        <h2 class="display-4"> Class Edited </h2>
-        <p class="lead">The class <strong>{{ gym_class.class_name }}</strong> has been successfully edited.</p>
+        <h2 class="display-4"> Instructor Profile Edited </h2>
+        <p class="lead">The instructor <strong>{{ instructor.instructor_name }}</strong> has been successfully edited.</p>
         <a href="{% url 'staff_area' %}" class="btn btn-primary btn-sm">Back to Staff Area</a>
     </div>
 {% endblock %}

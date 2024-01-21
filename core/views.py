@@ -246,11 +246,15 @@ def edit_class(request, class_id):
         form = GymClassForm(request.POST, request.FILES, instance=gym_class)
         if form.is_valid():
             form.save()
-            return redirect('staff_area')
+            return redirect('edit_class_confirmation')
     else:
         form = GymClassForm(instance=gym_class)
     
     return render(request, 'edit_class.html', {'form': form, 'gym_class': gym_class})
+
+def edit_class_confirmation(request):
+    return render(request, 'edit_class_confirmation.html')
+
 
 
 def edit_instructor(request, instructor_id):
@@ -260,11 +264,17 @@ def edit_instructor(request, instructor_id):
         form = InstructorProfileForm(request.POST, request.FILES, instance=instructor)
         if form.is_valid():
             form.save()
-            return redirect('staff_area')
+            return redirect('edit_instructor_confirmation', instructor_id=instructor_id)
     else:
         form = InstructorProfileForm(instance=instructor)
 
     return render(request, 'edit_instructor.html', {'form': form, 'instructor': instructor})
+
+def edit_instructor_confirmation(request, instructor_id):
+    instructor = get_object_or_404(InstructorProfile, pk=instructor_id)
+    return render(request, 'edit_instructor_confirmation.html', {'instructor': instructor})
+
+
 
 
 

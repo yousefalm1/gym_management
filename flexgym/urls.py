@@ -1,9 +1,9 @@
 from django.conf import settings
-from django.conf.urls.static import static
 
 from django.contrib import admin
 from django.urls import path,include
-from core.views import index, instructors, classes, join_class, profile, cancel_class, staff_area, delete_user, edit_membership, user_classes, add_user_to_class, create_instructor_profile, create_gym_class, edit_class, delete_class, edit_instructor, delete_instructor,create_instructor_confirmation, create_class_confirmation, create_user_profile, edit_user,edit_user_confirmation, delete_class_confirmation, delete_instructor_confirmation, edit_membership_confirmation
+from core.views import index, instructors, classes, join_class, profile, cancel_class, staff_area, delete_user, edit_membership, user_classes, add_user_to_class, create_instructor_profile, create_gym_class, edit_class, delete_class, edit_instructor, delete_instructor,create_instructor_confirmation, create_class_confirmation, create_user_profile, edit_user,edit_user_confirmation, delete_class_confirmation, delete_instructor_confirmation, edit_membership_confirmation,edit_class_confirmation, edit_instructor_confirmation
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -38,10 +38,12 @@ urlpatterns = [
 
     path('edit_class/<int:class_id>/', edit_class, name ='edit_class'),
     path('delete_class/<int:class_id>/', delete_class, name = 'delete_class'),
-
+    path('edit_class_confirmation/', edit_class_confirmation, name='edit_class_confirmation'),
 
 
     path('edit_instructor/<int:instructor_id>/',edit_instructor , name='edit_instructor'),
+    path('edit_instructor_confirmation/<int:instructor_id>/', edit_instructor_confirmation, name='edit_instructor_confirmation'),
+
     path('delete_instructor/<int:instructor_id>/', delete_instructor, name= 'delete_instructor'),
     path('delete_instructor_confirmation/<int:instructor_id>/', delete_instructor_confirmation, name='delete_instructor_confirmation'),
 

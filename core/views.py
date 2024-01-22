@@ -9,6 +9,8 @@ from django.contrib.auth.models import User
 from .models import GymClasses, UserProfile, InstructorProfile
 from .forms import InstructorProfileForm, GymClassForm, UserProfileForm, UserForm
 
+def error_404(request, exception):
+    return render(request, '404.html')
 
 
 def index(request):
@@ -254,6 +256,7 @@ def edit_class(request, class_id):
 
 def edit_class_confirmation(request):
     return render(request, 'edit_class_confirmation.html')
+
 
 
 

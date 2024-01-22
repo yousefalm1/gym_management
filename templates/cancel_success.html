@@ -1,4 +1,10 @@
-{% extends 'base.html' %} {% load static%} 
+{% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
-<h2>Cancel</h2>
+    <div class="container mt-4 text-center vertical-center">
+        <h2 class="display-4">Class Cancellation</h2>
+        <p class="lead">The class cancellation has been confirmed.</p>
+        <a href="{% url 'staff_area' %}" class="btn btn-primary">Back to Staff Area</a>
+    </div>
 {% endblock %}

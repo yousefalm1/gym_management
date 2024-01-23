@@ -1,3 +1,4 @@
+User
 {% extends 'base.html' %} 
 {% load static %} 
 {% block content %}
@@ -25,11 +26,11 @@
                             </p>
 
                             {% if user.is_authenticated %}
-                                {% if user.userprofile and user.membership_choices != "None" and user.userprofile %}
+                                {% if user.userprofile and user.userprofile.membership_choices != 'None' %}
                                     {% if user in gym_class.users.all %}
-                                    <a href="{% url 'cancel_class' class_id=gym_class.class_id %}" onclick="return confirmCancel()">
-                                        <button type="button" class="btn btn-danger">Cancel Class</button>
-                                    </a>
+                                        <a href="{% url 'cancel_class' class_id=gym_class.class_id %}" onclick="return confirmCancel()">
+                                            <button type="button" class="btn btn-danger">Cancel Class</button>
+                                        </a>
                                     {% else %}
                                         {% if gym_class.users.count < gym_class.max_capacity %}
                                             <a href="{% url 'join_class' class_id=gym_class.class_id %}">
@@ -55,7 +56,6 @@
     <script src="{% static 'js/script.js' %}"></script>
 
 {% endblock %}
-
 
 
 

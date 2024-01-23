@@ -81,5 +81,8 @@
 
 
 
+/* class page */
 
-/* Create Class Confirmation Page */
+.class-img {
+  height: 200px; /* Set the desired fixed height */
+}

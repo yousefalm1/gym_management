@@ -5,9 +5,9 @@
         <div class="row g-4">
             {% for gym_class in classes %}
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
+                    <div class="card h-100">
                         {% if gym_class.class_image %}
-                            <img src="{{ gym_class.class_image.url }}" class="card-img-top" alt="Boxing Class Image">
+                            <img src="{{ gym_class.class_image.url }}" class="card-img-top class-img" alt=" Class Image">
                         {% else %}
                             <p>No image available</p>
                         {% endif %}

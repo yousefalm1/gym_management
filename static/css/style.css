@@ -80,7 +80,9 @@
   }
 
 
-/* class page */
+/* class page and instructor img */
 
-/* .class-img {
-  height: 100px; /* Set the desired fixed height */
+.class-img {
+  height: 100px;
+  object-fit: cover
+}

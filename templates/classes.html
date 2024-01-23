@@ -7,44 +7,46 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100">
                         {% if gym_class.class_image %}
-                            <img src="{{ gym_class.class_image.url }}" class="card-img-top class-img" alt=" Class Image">
+                            <img src="{{ gym_class.class_image.url }}" class="card-img-top img-fluid custom-img" alt="Boxing Class Image">
                         {% else %}
                             <p>No image available</p>
                         {% endif %}
-                        <div class="card-body text-center">
+                        <div class="card-body text-center d-flex flex-column">
                             <h3 class="card-title">{{ gym_class.class_name }}</h3>
                             <p class="card-text">{{ gym_class.description }}</p>
 
-                            <p><strong> Max Capacity:</strong> {{ gym_class.max_capacity }} </p>
-                            <p><strong> Room Number:</strong> {{ gym_class.room_number }} </p>
-                            <p><strong> Instructors:</strong>
-                                {% for instructor in gym_class.instructors.all %}
-                                    {{ instructor.display_name }}
-                                    {% if not forloop.last %}, {% endif %}
-                                {% endfor %}
-                            </p>
+                            <div class="mt-auto">
+                                <p><strong> Max Capacity:</strong> {{ gym_class.max_capacity }} </p>
+                                <p><strong> Room Number:</strong> {{ gym_class.room_number }} </p>
+                                <p><strong> Instructors:</strong>
+                                    {% for instructor in gym_class.instructors.all %}
+                                        {{ instructor.display_name }}
+                                        {% if not forloop.last %}, {% endif %}
+                                    {% endfor %}
+                                </p>
 
-                            {% if user.is_authenticated %}
-                                {% if user.userprofile and user.userprofile.membership_choices != 'None' %}
-                                    {% if user in gym_class.users.all %}
-                                        <a href="{% url 'cancel_class' class_id=gym_class.class_id %}" onclick="return confirmCancel()">
-                                            <button type="button" class="btn btn-danger">Cancel Class</button>
-                                        </a>
-                                    {% else %}
-                                        {% if gym_class.users.count < gym_class.max_capacity %}
-                                            <a href="{% url 'join_class' class_id=gym_class.class_id %}">
-                                                <button type="button" class="btn btn-primary">Join Class</button>
+                                {% if user.is_authenticated %}
+                                    {% if user.userprofile and user.userprofile.membership_choices != 'None' %}
+                                        {% if user in gym_class.users.all %}
+                                            <a href="{% url 'cancel_class' class_id=gym_class.class_id %}" onclick="return confirmCancel()">
+                                                <button type="button" class="btn btn-danger">Cancel Class</button>
                                             </a>
                                         {% else %}
-                                            <p><strong> Class is full</strong></p>
+                                            {% if gym_class.users.count < gym_class.max_capacity %}
+                                                <a href="{% url 'join_class' class_id=gym_class.class_id %}">
+                                                    <button type="button" class="btn btn-primary">Join Class</button>
+                                                </a>
+                                            {% else %}
+                                                <p><strong> Class is full</strong></p>
+                                            {% endif %}
                                         {% endif %}
+                                    {% else %}
+                                        <p><strong> No membership</strong></p>
                                     {% endif %}
                                 {% else %}
-                                    <p><strong> No membership</strong></p>
+                                    <p><strong> You need to be logged in</strong></p>
                                 {% endif %}
-                            {% else %}
-                                <p><strong> You need to be logged in</strong></p>
-                            {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,8 +55,8 @@
     </div>
 
     <script src="{% static 'js/script.js' %}"></script>
-
 {% endblock %}
+
 
 
 

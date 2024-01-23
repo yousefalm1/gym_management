@@ -7,17 +7,17 @@
   <div class="row g-3">
     {% for instructor_profile in instructor_profiles %}
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="card">
+      <div class="card h-100">
         {% if instructor_profile.instructor_image %}
         <img
           src="{{ instructor_profile.instructor_image.url }}"
-          class="card-img-top"
+          class="card-img-top img-fluid custom-img"
           alt="Instructor Image"
         />
         {% else %}
         <p>No image available</p>
         {% endif %}
-        <div class="card-body">
+        <div class="card-body d-flex flex-column">
           <h5 class="card-title">{{ instructor_profile.display_name }}</h5>
           <p class="card-text">{{ instructor_profile.specialization }}</p>
           <p class="card-text">{{ instructor_profile.certification }}</p>

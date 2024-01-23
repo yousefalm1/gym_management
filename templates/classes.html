@@ -25,7 +25,7 @@
                             </p>
 
                             {% if user.is_authenticated %}
-                                {% if user.userprofile.membership_choices != "none" %}
+                                {% if user.userprofile and user.membership_choices != "None" and user.userprofile %}
                                     {% if user in gym_class.users.all %}
                                     <a href="{% url 'cancel_class' class_id=gym_class.class_id %}" onclick="return confirmCancel()">
                                         <button type="button" class="btn btn-danger">Cancel Class</button>

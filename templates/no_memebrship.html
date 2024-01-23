@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container mt-4 text-center vertical-center">
+        <h2 class="display-4">No Membership</h2>
+        <p class="lead">Please contact us regarding membership.</p>
+        <a href="{% url 'staff_area' %}" class="btn btn-primary">Back to Staff Area</a>
+    </div>
+{% endblock %}

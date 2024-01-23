@@ -17,10 +17,10 @@ class UserProfile(models.Model):
         ('bronze', 'Bronze'),
         ('silver', 'Silver'),
         ('gold', 'Gold'),
-        ('none', 'None'),
+        ('None', 'None'),
     ]
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    membership_choices = models.CharField(choices=MEMBERSHIP_CHOICES)
+    membership_choices = models.CharField(choices=MEMBERSHIP_CHOICES,default='None')
     join_date = models.DateField(default=timezone.now)
     new_membership_purchase = models.BooleanField(default=False)
 

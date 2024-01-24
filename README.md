@@ -30,3 +30,42 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 | [#7](https://github.com/) | As a First Time Visitor, I want access to testimonials from previous learners to gain insights into their experiences and the value they derived from the classes. |
 | [#8](https://github.com/) | As a First Time Visitor, I want the website to provide clear navigation and a visually appealing layout to enhance my overall user experience. |
 
+
+
+#### Regular User (Customer)
+
+ Issue ID    | User Story |
+|-------------|-------------|
+|[#1](https://github.com/) |As a regular user, I want a quick and secure login process to access my FlexGym account efficiently. |
+|[#1](https://github.com/) | As a regular user, I want a easy way to see what classes i have joined. |
+|[#1](https://github.com/) |As a regular user, I want to be able to cancel any class that i have joined. |
+|[#1](https://github.com/) |As a regular user, I want a to confirm if i want to cancel my class or join the class so i wont be able to do it by mistake. |
+|[#1](https://github.com/) |As a regular user, I want to be able to see if the class if full. |
+|[#1](https://github.com/) |As a regular user, I want a to be able to see the room number and instructor for the class incase it changes. |
+
+
+#### Admin(Staff)
+| Issue ID    | User Story |
+|-------------|-------------|
+|[#1](https://github.com/) |As a Admin, I want to be able be able to delete Users. |
+|[#1](https://github.com/) |As a Admin, I want to be able to edit the membership type of any user. |
+|[#1](https://github.com/) |As a Admin, I want to be able to look at all the classes the user has joined. |
+|[#1](https://github.com/) |As a Admin, I want to be able to edit the users profile, such as username, email and name. |
+|[#1](https://github.com/) |As a Admin, I Want to be to Add any user to any class,so that if a member asks (through email or reception desk) to be added to a class maybe because they have no access to the website, the admin will be able to. |
+|[#1](https://github.com/) |As a Admin, I want to be to edit any of classes, so that i can be able to update the class name, room number, description, max capacity, class image, and coach. |
+|[#1](https://github.com/) |As a Admin, I want to be able to look at all the users in each class, so that if member asks if they are enrolled into the class i would be able to check and confirm with them. |
+|[#1](https://github.com/) |As a Admin, I want to be able delete any of the classes, so that if the gym no longer has the class i can remove it from the website. |
+|[#1](https://github.com/) |As a Admin, I want to be able to edit the the profile of all instructor profiles, so that i can update the Specialization, Certification, Display name and Image. |
+|[#1](https://github.com/) |As a Admin, I want to be able to delete any of the instructor profiles, so that if a instructor is no longer with the gym i can remove them from the website. |
+|[#1](https://github.com/) |As a Admin, I want to be able to create a new instructor profile to be added the website, so that when a new instructor join the gym i can add a instructor profile to the user account of the instructor to be displayed on the website. |
+|[#1](https://github.com/) |As a Admin, I want to be able to create a user profile for a user, so that when a user creates an account the admin will be able to add the users membership choice, join date and if its a new membership purchase when the new member speaks to the reception at the gym to pay(Until Future Development When user can pay online).|
+|[#1](https://github.com/) |As a Admin, I want to be able to create a new class, so that when the gym has a new class to offer i will be able to create a new class to be added to the website.
+
+
+
+
+
+
+
+
+ 

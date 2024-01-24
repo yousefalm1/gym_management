@@ -15,7 +15,18 @@ This website is designed to be user-friendly for both staff and members. Members
 
 This website is meant for fitness enthusiasts of all levels, seeking a convenient and engaging platform to enhance their fitness journey. Members who value ease of use, accessibility, and a variety of class options will find our website tailored to their preferences. Whether you're a beginner exploring fitness classes or an experienced gym-goer looking for specific instructors, our platform caters to a diverse range of needs.
 
+### User Stories
 
+#### First Time Visitor
 
-
+ Issue ID    | User Story |
+|-------------|-------------|
+| [#1](https://github.com/) | As a First Time Visitor, I want a straightforward and intuitive sign-up process to create my account on FlexGym. |
+| [#2](https://github.com/) | As a First Time Visitor, I want the option to explore the available classes without committing to a login. |
+| [#3](https://github.com/) | As a First Time Visitor, I want to see a diverse range of classes with brief descriptions, so I can quickly identify those that match my interests. |
+| [#4](https://github.com/) | As a First Time Visitor, I want to be able to find the app useful, so that I can use it according to my needs. |
+| [#5](https://github.com/) | As a First Time Visitor, I want to learn more about the instructors, including their expertise and teaching styles, to make informed decisions about the classes I might join. |
+| [#6](https://github.com/) | As a First Time Visitor, I want to be able to see the list of products, so that I can learn the benefits of the app as a user. |
+| [#7](https://github.com/) | As a First Time Visitor, I want access to testimonials from previous learners to gain insights into their experiences and the value they derived from the classes. |
+| [#8](https://github.com/) | As a First Time Visitor, I want the website to provide clear navigation and a visually appealing layout to enhance my overall user experience. |
 

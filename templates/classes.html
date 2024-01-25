@@ -22,7 +22,7 @@
                             <div class="mt-auto">
                                 <p><strong> Max Capacity:</strong> {{ gym_class.max_capacity }} </p>
                                 <p><strong> Room Number:</strong> {{ gym_class.room_number }} </p>
-                                <p><strong> Instructors:</strong>
+                                <p><strong> Instructor:</strong>
                                     {% for instructor in gym_class.instructors.all %}
                                         {{ instructor.display_name }}
                                         {% if not forloop.last %}, {% endif %}

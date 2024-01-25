@@ -62,6 +62,170 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 |[#1](https://github.com/) |As a Admin, I want to be able to create a new class, so that when the gym has a new class to offer i will be able to create a new class to be added to the website.
 
 
+## Features (Regular User)
+
+### Desktop
+
+1. Landing page
+    - When a first time user visits the website they will be welcomed with landing page which will have a nav bar which the user will be able to visit all the pages, login and sign up, testimonials and opening times.
+
+    ![landing page](documentation/website_screenshots/landing_page.png)
+
+
+2. Register
+    - When a first time user clicks Register which is located in the 
+    the nav bar they are redirected to the Register page 
+    - The new user will then be able to input a username, email and password; then clicking the "Sign up" button to create the account.
+
+    ![register page](documentation/website_screenshots/landing_page.png)
+
+3. Login
+    - When a user already has an account they would click the login button which located in the nav bar they are then redirected to the login page.
+    - The user then will be able to input there email and password then click login and if the information the user inputted is correct then they will be redirected to the home screen.
+    - If the user inputted the wrong details they will be asked to input the email and password again.
+    
+    ![login page](documentation/website_screenshots/landing_page.png)
+
+4. Instructors
+    - Whether the user has an account or no account they will be able to access the instructor page by clicking the instructor tab in the nav bar which will redirect the user to the instructor page.
+    - The instructor page has cards of all the instructor that are in the database displayed next to each other.
+    - The cards contain an images of each instructor with their name, what they coach, and there certification.
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+5. Classes
+    - Whether the user has an account or no account they will be able to see all the classes the gym has to offer in a card layout.
+    - The information in the cards for everyone who accesses the page will be an image of the class, description of the class, max capacity, room number and the specific coach that will be coaching the class.
+    - Under the instructor text there will either be a text saying:
+        - "you need to be logged in" if the user is not logged in.
+        - "no membership" if the user has no membership.
+        -"Join Class(button)"  if the user has a membership and the class is not full.
+        - "class is full" if the the class is full
+        - "Cancel Class(button)" if the user is a member and has joined a class he will be able to cancel the class.
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+    - When a member joins class or cancel class there will be a pop up to confirm the action.
+    - If the user confirms the action then the user will be redirected to a confirmation page to let the user knows if they successful joined the class or canceled the class.
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+
+6. Profile
+
+    - When the user logs in to there account a profile tab will appear in the nav bar 
+    - When the user clicks the profile tab they will be directed to a profile page where the user will be able to see:
+        - The users Username.
+        - The Users Membership.
+        - The users Join Date.
+
+
+## Features (Staff)
+
+1. Staff Area
+    - When the user who has staff access a staff tab will appear in the nav bar.
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+    - When the user clicks the staff area they will be redirected to the staff area page.
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+    - The staff area has 6 buttons:
+        - 3 blue buttons which when clicked shows:
+            - All the users.
+            - All the classes.
+            - All the instructors.
+        - 3 green buttons which when clicked shows:
+            - Create new instructor profile.
+            - Create new user profile.
+            - Create new class.
+
+
+2. Show Users 
+
+    - When the staff clicks the Show users button all the users will appear in a table with each user having their own row.
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+    - Each row has this information about the user:
+        - Username
+        - Email
+        - Registration Date
+        = User Type
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+    - Each row also has 5 different button:
+        - Delete 
+        - Edit Membership
+        - Classes Joined 
+        - Add To A Class
+        - Edit User
+
+    
+
+    - Delete Button
+
+        - When the staff clicks the delete button of a user a pop up will appear to confirm if the staff wants to delete the user.
+
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+        - Once the staff confirms the deletion of the staff will be redirected to a confirmation page to let the staff know the user has been deleted successfully and a button to go back to the staff area.
+
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+
+    - Edit Membership
+
+        - When the staff clicks edit membership they will be redirected to the edit membership page.
+
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+        - The edit membership page will show the staff the current membership of the user and then a membership choice dropdown that will allow the staff to pick a new membership type for the user.
+
+        - Once the staff clicks save changes they will be redirected to the confirmation page so the staff knows the membership has successfully been changed.
+
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+
+    - Classes Joined
+
+        - When the staff clicks the classes joined the they will be redirected to classes user joined page where the staff will be able to see:
+            - The classes the use joined.
+            - The room number.
+
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+
+    - Edit User 
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
 
 
 

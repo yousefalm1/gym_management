@@ -31,6 +31,15 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 | [#8](https://github.com/) | As a First Time Visitor, I want the website to provide clear navigation and a visually appealing layout to enhance my overall user experience. |
 
 
+## Technologies Used
+- ### Languages:
+    - [Python 3.8.5](https://www.python.org/downloads/release/python-385/): the primary language used to develop the server-side of the website.
+
+
+
+
+
+
 
 #### Regular User (Customer)
 
@@ -80,20 +89,37 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
     ![register page](documentation/website_screenshots/landing_page.png)
 
 3. Login
+
     - When a user already has an account they would click the login button which located in the nav bar they are then redirected to the login page.
     - The user then will be able to input there email and password then click login and if the information the user inputted is correct then they will be redirected to the home screen.
     - If the user inputted the wrong details they will be asked to input the email and password again.
     
     ![login page](documentation/website_screenshots/landing_page.png)
 
-4. Instructors
+4. Log Out 
+
+    - When the user wants to log out of their account they would click the "Log Out" link in the nav bar they will be directed to the sign out page.
+
+    ![login page](documentation/website_screenshots/landing_page.png)
+
+    - Once they are directed to the sign out page they would click the sign out button to confirm that they want to sign out. 
+
+    ![login page](documentation/website_screenshots/landing_page.png)
+
+    - Once they click the sign out button they will directed back to the home page.
+
+
+
+
+5. Instructors
+
     - Whether the user has an account or no account they will be able to access the instructor page by clicking the instructor tab in the nav bar which will redirect the user to the instructor page.
     - The instructor page has cards of all the instructor that are in the database displayed next to each other.
     - The cards contain an images of each instructor with their name, what they coach, and there certification.
 
     ![Instructor page](documentation/website_screenshots/landing_page.png)
 
-5. Classes
+6. Classes
     - Whether the user has an account or no account they will be able to see all the classes the gym has to offer in a card layout.
     - The information in the cards for everyone who accesses the page will be an image of the class, description of the class, max capacity, room number and the specific coach that will be coaching the class.
     - Under the instructor text there will either be a text saying:
@@ -111,7 +137,7 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
     ![Instructor page](documentation/website_screenshots/landing_page.png)
 
 
-6. Profile
+7. Profile
 
     - When the user logs in to there account a profile tab will appear in the nav bar 
     - When the user clicks the profile tab they will be directed to a profile page where the user will be able to see:
@@ -149,19 +175,21 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
     ![Instructor page](documentation/website_screenshots/landing_page.png)
 
     - Each row has this information about the user:
-        - Username
-        - Email
-        - Registration Date
-        = User Type
+
+                - Username
+                - Email
+                - Registration Date
+                - User Type
 
     ![Instructor page](documentation/website_screenshots/landing_page.png)
 
     - Each row also has 5 different button:
-        - Delete 
-        - Edit Membership
-        - Classes Joined 
-        - Add To A Class
-        - Edit User
+
+                - Delete 
+                - Edit Membership
+                - Classes Joined 
+                - Add To A Class
+                - Edit User
 
     
 
@@ -191,45 +219,169 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 
     - Classes Joined
 
-        - When the staff clicks the classes joined the they will be redirected to classes user joined page where the staff will be able to see:
-            - The classes the use joined.
-            - The room number.
+        - When the staff clicks the classes joined they will be redirected to classes user joined page where the staff will be able to see:
+
+                - The classes the use joined.
+                - The room number.
 
         ![Instructor page](documentation/website_screenshots/landing_page.png)
 
 
-    - Edit User 
+    - Edit User
 
+        - When the user clicks the edit user they will be directed to a page where they will be able to update the users profile, the information they will be able to update information like:
+
+                - Username
+                - Email Address
+                - First Name
+                - Last Name 
         
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+        - Once the staff finished updating the users information they will click save changes and a pop up will appear for the staff member to confirm the save.
+
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+        - Once clicked they will be be redirected to the confirmation page so the staff will be able to know that the change was successful.
+
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+3. Show Classes
+
+    - When the staff clicks the show class button a table will appear with each class in their own row; each row has three button:
+
+            - Edit Class
+            - Show Users
+            - Delete Class
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+    - Edit Class
+
+        - When the staff member clicks the "Edit Class" button they will redirected to a page to update the class information; the information that will be able to edited will be:
+
+                - Class Name
+                - Room Number
+                - Description
+                - Max Capacity
+                - Class Image
+                - Change
+                - Instructors
+
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+        - Once the staff is done updating the classes information they will click the "Edit The Class" button and will be presented with a pop up to confirm the staff wants to confirm this update.
+
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+        - When the Staff confirms the update they will be redirected to a confirmation page.
+
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+    
+    - Show Users
+
+        - When the staff member clicks the "Show Users" button all the usernames who have joined the class will appear.
+
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
 
 
+    - Delete Class
 
+        - When the user clicks the "Delete Class" button they will be presented with a pop up for the staff to confirm the action of deleting the class
 
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
 
+        - Once the user deletes confirms the deletion they will be directed to the confirmation page.
 
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
 
+4. Show Instructors
 
+    - When the staff clicks the "Show instructors" button a table with appear with all the instructor profiles that will be shown in the instructors page of the website.
 
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
 
+    - In each row there will be two buttons:
 
+            - Edit Profile
+            - Delete 
+    
+    - Edit Profile 
 
+        - When the staff click edit profile they will be redirected to the the edit instructor profile page.
 
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
 
-
-
-
-
-
-
-
+            - Specialization
+            - Certification
+            - Display name
+            - Instructor image
             
+         ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+         - Once the staff is happy with the changes they click the save changes button which will direct the user to the the confirmation page so the staff member knows the changes was successful
+        
+        ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+
+5. Create New Instructor Profile
+
+    - When the staff clicks "Create New Instructor Profile" button they will be directed to a page with an empty form for the staff to fill in which will then appear in the instructor page of the website for everyone to see.
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+    - The information that the staff would need to fill in would be:
+
+            - Instructor User
+            - Specialization
+            - Certification
+            - Display Name
+            - Instructor Image
+
+    - Once the staff adds all the required information and clicks the "Create Profile" they will directed to a confirmation page to let the staff know that the new instructor profile has been successfully created.
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)  
 
 
 
+6. Create New User profile
+
+    - When the staff click the "Create New User Profile" button they will be directed to a page with an empty form for the staff to fill in to create a user profile for every user in order to be able to get a membership.
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
 
 
+    - The information that the staff would need to fill in would be: 
+    
+            - User
+            - Membership Choices
+            - Join Date
+            - New Membership purchase
+
+    
+    - Once the staff adds all the required information and click "Create Profile" button they will be directed to a confirmation page to let the staff member knows that the new user profile has been successfully been created.
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
 
 
+7. Create New Class
+
+    - When the staff clicks "Create New Class" button they will directed to a page with an empty form for the staff to fill in. This will then to create a new class that will be visible in the classes page of the website.
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+    - The information that the staff would need to fill in would be:
+
+            - Class Name
+            - Room number
+            - Description
+            - Max capacity
+            - Class image
+            - Instructors
+
+    - Once the staff adds all the required information and click "Create New Class" button they will be directed to a confirmation page to let the staff member knows that new class has been successfully been created.
+
+    ![Instructor page](documentation/website_screenshots/landing_page.png)
 
 
- 

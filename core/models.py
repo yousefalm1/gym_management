@@ -39,29 +39,29 @@ class InstructorProfile(models.Model):
         return self.instructor.username
 
 
-class MemberProfile(models.Model):
-    member = models.OneToOneField(User, on_delete=models.CASCADE)
-    membership_type = models.ForeignKey(MembershipType, on_delete=models.CASCADE, null=True) 
-    renewal_date = models.DateField()
+# class MemberProfile(models.Model):
+#     member = models.OneToOneField(User, on_delete=models.CASCADE)
+#     membership_type = models.ForeignKey(MembershipType, on_delete=models.CASCADE, null=True) 
+#     renewal_date = models.DateField()
 
-    def __str__(self):
-        return self.member.username
+#     def __str__(self):
+#         return self.member.username
 
 
-class AdminProfile(models.Model):
-    admin = models.OneToOneField(User, on_delete=models.CASCADE)
-    is_superadmin = models.BooleanField(default=False)
+# class AdminProfile(models.Model):
+#     admin = models.OneToOneField(User, on_delete=models.CASCADE)
+#     is_superadmin = models.BooleanField(default=False)
 
-    ROLE_CHOICES = [
-        ('admin', 'Administrator'),
-        ('staff', 'Staff')
+#     ROLE_CHOICES = [
+#         ('admin', 'Administrator'),
+#         ('staff', 'Staff')
         
-    ]
+#     ]
 
-    roles = models.CharField(max_length=100, choices=ROLE_CHOICES)
+#     roles = models.CharField(max_length=100, choices=ROLE_CHOICES)
 
-    def __str__(self):
-        return self.admin.username
+#     def __str__(self):
+#         return self.admin.username
 
 
 

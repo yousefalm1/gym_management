@@ -30,17 +30,6 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 | [#7](https://github.com/) | As a First Time Visitor, I want access to testimonials from previous learners to gain insights into their experiences and the value they derived from the classes. |
 | [#8](https://github.com/) | As a First Time Visitor, I want the website to provide clear navigation and a visually appealing layout to enhance my overall user experience. |
 
-
-## Technologies Used
-- ### Languages:
-    - [Python 3.8.5](https://www.python.org/downloads/release/python-385/): the primary language used to develop the server-side of the website.
-
-
-
-
-
-
-
 #### Regular User (Customer)
 
  Issue ID    | User Story |
@@ -69,6 +58,39 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 |[#1](https://github.com/) |As a Admin, I want to be able to create a new instructor profile to be added the website, so that when a new instructor join the gym i can add a instructor profile to the user account of the instructor to be displayed on the website. |
 |[#1](https://github.com/) |As a Admin, I want to be able to create a user profile for a user, so that when a user creates an account the admin will be able to add the users membership choice, join date and if its a new membership purchase when the new member speaks to the reception at the gym to pay(Until Future Development When user can pay online).|
 |[#1](https://github.com/) |As a Admin, I want to be able to create a new class, so that when the gym has a new class to offer i will be able to create a new class to be added to the website.
+
+
+## Technologies Used
+
+- ### Languages:
+
+    - [Python 3.9.5](https://www.python.org/downloads/release/python-395/): The primary language used to develop the server-side of the website.
+    - [JS](https://www.javascript.com/): The primary language used to develop interactive components of the website.
+    - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): The markup language used to create the website.
+    - [CSS](https://developer.mozilla.org/en-US/docs/Web/css): The styling language used to style the website.
+
+- ### Frameworks and libraries:
+
+    - [Django](https://www.djangoproject.com/): python framework used to create all the logic.
+    - [Bootstrap](https://getbootstrap.com/): Bootstrap framework used is a css framework developing responsive and mobile-first websites.
+    - [Pillow](https://pypi.org/project/pillow/): Pillow is used for processing images.
+
+
+- ### Other tools:
+
+    - [Git](https://git-scm.com/): The version control system used to manage the code.
+    - [Pip3](https://pypi.org/project/pip/): the package manager used to install the dependencies.
+    - [Gunicorn](https://gunicorn.org/): The web server used to run the website.
+    - [Psycopg2](https://www.psycopg.org/): The database driver used to connect to the database.
+    - [Django-allauth](https://django-allauth.readthedocs.io/en/latest/): The authentication library used to create the user accounts.
+    - [GitHub](https://github.com/): Used to host the website's source code.
+    - [VSCode](https://code.visualstudio.com/): The IDE used to develop the website.
+    - [Chrome DevTools](https://developer.chrome.com/docs/devtools/open/): was used to debug the website.
+    - [Font Awesome](https://fontawesome.com/): was used to create the icons used in the website.
+    - [W3C Validator](https://validator.w3.org/): was used to validate HTML5 code for the website.
+    - [W3C CSS validator](https://jigsaw.w3.org/css-validator/): was used to validate CSS code for the website.
+    - [JShint](https://jshint.com/): was used to validate JS code for the website.
+    - [JShint](https://jshint.com/): was used to validate JS code for the website.
 
 
 ## Features (Regular User)
@@ -384,4 +406,33 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 
     ![Instructor page](documentation/website_screenshots/landing_page.png)
 
+---
 
+## Design
+
+
+---
+
+## Agile Methodology
+
+### GitHub Project Management
+
+- GitHub Project Management was essential for overseeing the project's development. It enabled efficient task prioritization and tracking, making it a crucial tool for successfully managing the application's progress.
+
+### Process of using Git Hub Project Management
+
+    The Beginning of using GitHub Project Management before using the badges 
+
+ ![GitHub Project Management](documentation/aglie/before_badges.png)
+
+    After adding the badges
+
+![GitHub Project Management](documentation/aglie/after_badges.png)
+
+    Around half way through the project moving the task in Todo column to the Done column
+
+![GitHub Project Management](documentation/aglie/mid_way.png)
+ 
+    At the end when all the tasks are in Done column
+
+![GitHub Project Management](documentation/aglie/done_tasks.png)

@@ -436,3 +436,75 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
     At the end when all the tasks are in Done column
 
 ![GitHub Project Management](documentation/aglie/done_tasks.png)
+
+
+---
+
+## Information Architecture
+
+### Database
+
+- The project is using PostgreSQL as the database engine.
+- The specific PostgreSQL instance is hosted on ElephantSQL.
+- The dj_database_url package is helping parse the DATABASE_URL from the environment variables.
+
+
+## Data Modeling
+
+
+### Gym Classes Model
+
+| Name          | Database Key  | Field Type    | Validation       |
+| ------------- | ------------- | ------------- | ---------------- |
+| class_id      | class_id      | AutoField     | primary_key=True |
+| class_name    | class_name    | CharField     | max_length=100   |
+| room_number   | room_number   | CharField     | max_length=5     |
+| description   | description   | TextField     | default="Your default description goes here"|
+| max_capacity  | max_capacity  | IntegerField  |                  |
+| users         | users         | ManyToManyField | User           |
+| class_image   | class_image   | ImageField    | upload_to='class_images', null=True, blank=True |
+| instructors   | instructors   | ManyToManyField | ManyToManyField |
+
+
+### InstructorProfile Model
+
+| Name          | Database Key  | Field Type    | Validation       |
+| ------------- | ------------- | ------------- | ---------------- |
+| instructor    | instructor  | OneToOneField    | User, on_delete=models.CASCADE |
+| specialization | specialization  | CharField | max_length=50 |
+| certification    | certification   | TextField  |       |
+| display_name    | display_name   | CharField  | max_length=100, default='Default Display Name'  |
+| instructor_image  | instructor_image   | ImageField          | upload_to='images/', null=True, blank=True   |
+
+
+### MembershipType Model
+
+| Name          | Database Key  | Field Type    | Validation       |
+| ------------- | ------------- | ------------- | ---------------- |
+| membership_type_id |  membership_type_id  | AutoField| primary_key=True |
+| membership_type_name   | membership_type_name  | CharField  | max_length=100      |
+
+
+### UserProfile Model
+
+| Name          | Database Key  | Field Type    | Validation       |
+| ------------- | ------------- | ------------- | ---------------- |
+| user          | user          | OneToOneField     | User, on_delete=models.CASCADE |
+| membership_choices     | membership_choices | CharField      | choices=MEMBERSHIP_CHOICES, default='None'         |
+| join_date      | join_date     | DateField         | default=timezone.now   |
+| new_membership_purchase | new_membership_purchase | BooleanField | default=False  |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

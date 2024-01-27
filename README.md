@@ -108,7 +108,7 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
     the nav bar they are redirected to the Register page 
     - The new user will then be able to input a username, email and password; then clicking the "Sign up" button to create the account.
 
-    ![register page](documentation/website_screenshots/landing_page.png)
+    ![register page](documentation/website_screenshots/register.png)
 
 3. Login
 
@@ -116,22 +116,17 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
     - The user then will be able to input there email and password then click login and if the information the user inputted is correct then they will be redirected to the home screen.
     - If the user inputted the wrong details they will be asked to input the email and password again.
     
-    ![login page](documentation/website_screenshots/landing_page.png)
+    ![login page](documentation/website_screenshots/login.png)
 
 4. Log Out 
 
     - When the user wants to log out of their account they would click the "Log Out" link in the nav bar they will be directed to the sign out page.
 
-    ![login page](documentation/website_screenshots/landing_page.png)
+    ![LogOut page](documentation/website_screenshots/logout.png)
 
     - Once they are directed to the sign out page they would click the sign out button to confirm that they want to sign out. 
 
-    ![login page](documentation/website_screenshots/landing_page.png)
-
     - Once they click the sign out button they will directed back to the home page.
-
-
-
 
 5. Instructors
 
@@ -139,7 +134,7 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
     - The instructor page has cards of all the instructor that are in the database displayed next to each other.
     - The cards contain an images of each instructor with their name, what they coach, and there certification.
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+    ![Instructor page](documentation/website_screenshots/instructors.png)
 
 6. Classes
     - Whether the user has an account or no account they will be able to see all the classes the gym has to offer in a card layout.
@@ -631,6 +626,44 @@ First step is to create a local copy of the GitHub repository by following one o
     - ```python manage.py runserver```
 
     ![Run server](documentation/deployment/run_server.png)
+
+11. Access the website by the link provided in terminal. Add ```/admin/``` at the end of the link to access the admin panel.
+
+    ![Admin Panel](documentation/deployment/run_server.png)
+
+## Heroku Deployment
+
+1. Create a Heroku account if you don't already have one.
+
+2. Create a new app on Heroku.
+
+    - Click the "New" button.
+        ![New button](documentation/deployment/click_new.png)
+
+    - Click on the "Create new app" button.
+        ![create app](documentation/deployment/click_create_new_app.png)
+
+    - Choose a name for your app and region.
+     ![pick name and region](documentation/deployment/choose_name.png)
+
+     - Click on the "Create app" button.
+
+     ![click create app](documentation/deployment/click_create_app.png)
+
+3. Go to settings tab
+
+    ![settings on heroku](documentation/deployment/heroku_settings.png)
+
+4. click revel config vars and add these vars make sure to make debug false when done.
+
+    ![Add vars](documentation/deployment/config_vars.png)
+
+
+
+
+
+
+
 
     
 

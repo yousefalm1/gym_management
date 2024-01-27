@@ -85,6 +85,6 @@
 /* class page and instructor img */
 
 .class-img {
-  height: 100px;
+  height: 300px;
   object-fit: cover
 }

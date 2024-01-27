@@ -494,6 +494,192 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 | join_date      | join_date     | DateField         | default=timezone.now   |
 | new_membership_purchase | new_membership_purchase | BooleanField | default=False  |
 
+---
+# Testing
+
+
+
+## Validation
+
+- ### HTML
+
+    - 
+
+
+---
+
+# Deployment
+
+## Deployment instructions for the project
+
+## Local deployment:
+
+*Note:*
+
+    - This project requires the installation of all requirements:
+    - Open the terminal window and type
+
+First step is to create a local copy of the GitHub repository by following one of these ways :
+
+- Download the Zip file:
+
+  1. Go to the Github repository for this project which is [GitHub Repository page](https://github.com/yousefalm1/gym_management).
+    ![GitHub Project Management](documentation/deployment/github_repo.png)
+
+  2. Click the Code button and download the ZIP file containing the project.
+    ![GitHub Project Management](documentation/deployment/download_zip.png)
+
+  3. Unzip the downloaded file and save it to a location on your computer.
+
+- Clone the repository
+
+    1. Open a code editor
+    ![GitHub Project Management](documentation/deployment/open_vscode.png)
+
+    2. Open a folder in VScode
+
+    ![GitHub Project Management](documentation/deployment/open_folder.png)
+
+    3. Open the terminal
+
+    ![GitHub Project Management](documentation/deployment/open_terminal.png)
+
+    4. Run the clone command
+
+    git clone https://github.com/yousefalm1/gym_management
+
+    ![GitHub Project Management](documentation/deployment/run_clone_command.png)
+
+    5. Navigate to the Cloned Repository:
+
+    cd gym_management
+
+    ![Navigate to Repo](documentation/deployment/navigate_repo.png)
+
+   
+
+## Local Deployment
+
+1. Clone the repository.
+
+    - ```git clone https://github.com/IuliiaKonovalova/e-commerce.git```
+
+        ![clone Repo](documentation/deployment/run_clone_command.png)
+
+2.  2. Go to the ```gym_management``` directory.
+
+    - ```cd gym_management```
+
+        ![Navigate to Repo](documentation/deployment/navigate_repo.png)
+
+3. Create a virtual environment.
+
+    - ```python3 -m venv venv```
+
+        ![Create Virtual Environment](documentation/deployment/create_virtual.png)
+
+    - ```source venv/bin/activate```
+
+        ![Activate Virtual Environment](documentation/deployment/activate_virtual_env.png)
+
+4. Install Dependencies
+
+    - ```pip install -r requirements.txt```
+
+        ![Install all dependencies](documentation/deployment/install_dependencies.png)
+
+
+5. Create an env.py File
+
+    - ```touch env.py```
+
+        ![Create env file](documentation/deployment/create_env_file.png)
+
+6. Add the following lines to ```env.py```:
+
+    - ```import os ```
+    - ```os.environ.setdefault("DATABASE_URL",  "postgres://ehdeynzy:jdfrGgSKurLeCnfJoRUgUs7a5gqkO28L@flora.db.elephantsql.com/ehdeynzy")```
+
+    ![Add to env file](documentation/deployment/add_to_env.png)
+
+ 7. Create Database Tables
+
+    - ```python manage.py makemigrations```
+
+    - This command will analyze your Django models and create migration files in the migrations directory.
+
+    ![Create Database Tables](documentation/deployment/create_database_tables.png)
+
+8. Apply Migrations
+
+    - ```python manage.py migrate```
+
+    ![apply migrations](documentation/deployment/apply_migrations.png)
+
+    - This command will execute the SQL statements defined in the migration files and create the necessary tables in your database.
+
+
+
+9. Create a Superuser
+
+    - ```python manage.py createsuperuser```
+
+    ![Create super user](documentation/deployment/create_super_user.png)
+
+10. Run the Development Server
+
+    - ```python manage.py runserver```
+
+    ![Run server](documentation/deployment/run_server.png)
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
 
 
 

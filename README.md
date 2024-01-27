@@ -146,12 +146,33 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
         - "class is full" if the the class is full
         - "Cancel Class(button)" if the user is a member and has joined a class he will be able to cancel the class.
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+    ![Classes page](documentation/website_screenshots/classes.png)
 
-    - When a member joins class or cancel class there will be a pop up to confirm the action.
-    - If the user confirms the action then the user will be redirected to a confirmation page to let the user knows if they successful joined the class or canceled the class.
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+    - If the user has no membership it will show "No Membership" under the instructor
+
+    ![No membership](documentation/website_screenshots/no_memberhsip.png)
+
+    - If the user has a membership a "Join Class" button will appear 
+
+    ![They have membership ](documentation/website_screenshots/member_join_class.png)
+
+    - WHen use clicks join class  
+
+
+    - When user wants to cancel class the button will turn red and have the text "cancel class"
+
+    ![They have membership ](documentation/website_screenshots/cancel_class.png)
+
+    - When the user clicks cancel class a pop will appear so the user can confirm the action
+
+    ![They have membership ](documentation/website_screenshots/cancel_class_pop.png)
+
+
+    - Once the user confirms the action they will directed to a page showing the user that the action has been successful.
+
+
+    ![They have membership ](documentation/website_screenshots/cancel_class_confirmation.png)
 
 
 7. Profile
@@ -161,6 +182,8 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
         - The users Username.
         - The Users Membership.
         - The users Join Date.
+
+    ![User profile information ](documentation/website_screenshots/user_profile_info.png)
 
 
 ## Features (Staff)

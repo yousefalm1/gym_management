@@ -593,6 +593,103 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 ---
 # Testing
 
+## Manual Testing
+
+### User(Customer)
+| Page    | User Actions           | Expected Results | Y/N |
+|-------------|------------------------|------------------|------|
+| Register     |                        |                  |      |
+| 1           | Click on Register button | Redirection to Register page | Y |         
+| 2   |  Click on sign in link                     | Redirects user to sign in page                |    Y  |
+|  3    |  Input correct details (including email)  and click sign up                  |    Redirects user to home page since meaning user has made an account         |   Y   |
+|   Log Out    |                         |                  |      |
+|   1   |    User clicks the sign out button |       Redirects user sign out page |   Y   |
+|   2  |        User click sign out button                 |     User gets signed out              |   Y   |
+|   Log In   |                      |             |    Y  |
+|   1   |      User clicks login button                   |   Redirects user to login  page                 |  Y    |
+|   2   |       User inputs  information  and clicks sign in button               |       user is redirected to home page being logged in           |   Y   |
+|    3  |      User input wrong information and clicks sign in                  |  Message appears letting user the information inputted is wrong        |  Y    |
+|   4   |         clicks text link in the sign in page                | Redirects user to sign in page                |    Y  |
+|  Home page    |                        |                  |      |
+|   1   |       Click explore classes button in hero section            |    Redirects user to classes page              |   Y   |
+|    NavBar(Not Staff)  |   |  |      |
+|   1   |   Click Home button     |  Redirects user to home page                |   Y   |
+|   2   |   Click Instructors button   |     Redirects user to     Instructors    page     |   Y   |
+|   3   |  Click  Classes button                    |     Redirects user to classes page             |   Y   |
+| 4     |    Click Profile button                    |   Redirects user to profile page               |  Y    |
+|  Instructor Page    |                        |                  |      |
+|   1   |  User goes to Instructor Page   |     Shows all information on instructors             |  Y    |
+|  Classes Page(No Membership)    |                        |                  |      |
+|    1  | User goes to classes page                        |  Shows all information on classes                |   Y   |
+|   2   |   User has no membership                     |  No Membership appears in bold at the bottom of the each card            |  Y    |
+|   Classes Page(Has Membership)   |                        |                  |      |
+|  1    |     User has membership                 |    Instead of "No membership" a button with the text "Join Class" will show              |    Y  |
+|  2    | User clicks join class                       |  Pop up appears asking the user to confirm the joining of class            |   Y   |
+|   3   |   User clicks ok                     |   Redirects user to confirmation page               |   Y   |
+|  4    |  User joined class and goes back to classes page                     |  The classes the user joined button turns into "Cancel Class" button              |    Y  |
+|  5    |  User clicks "Cancel Class" Button"                     |    Pop up appears asking user to confirm the canceling of the class          |  Y    |
+|   6   |   User clicks ok                      | Redirects user to confirmation page                 |   Y   |
+|  7     |    user clicks "back to classes" button in confirmation page                |   Redirects user back to classes page               | Y     |
+|  Profile Page    |                        |                  |      |
+|  1    |   User goes to Profile page                    |   Users Information appears on the page                |  Y    |
+
+### User(Staff)
+
+| Page    | User Actions           | Expected Results | Y/N |
+|-------------|------------------------|------------------|------|
+| NavBar     |                        |                  |      |
+| 1         | Staff has admin access | Staff button appears on NavBar | Y |         
+|  2    |      Staff clicks staff button                  |     User is redirected to staff area page             |  Y    |
+|   Show Users Button   |                        |                  |      |
+|  1    | Staff clicks show user button                       |     All users appear in a table             |    Y  |
+|   2   |      Staff clicks Delete button for one of the users             |   Pop up appears           |   Y   |
+|  3    |     staff clicks "ok" in the pop up                   | User    redirected to confirmation page             |   Y   |
+|   4   |    Staff clicks"back to staff area" button  in the confirmation page             |     Redirected to Staff area            | Y     |
+|   5   |  Staff clicks "Edit Membership" Button                       |        Redirected to  edit membership page if user has a user profile |  Y    |
+|    6   | Pick a different type of membership and click save changes   | Staff is redirected to membership changed confirmation page                  |    Y  |
+|    7   |  Staff clicks "Back to staff area" button in confirmation page   |    Staff is redirected to staff area              |    Y |
+|   8    |  Staff clicks "Classes Joined" button   | Staff is redirected to classes joined page where they can see all the classes the user specific user has joined                  |  Y   |
+|   9   |  Click "Add To Class" Button    |  Staff is redirected to add to class page                |  Y    |
+|    10     |  Pick a class for specific user to join and click "Add To Class" Button  | Staff is redirected to user added to class confirmation page               |  Y  |
+|   11    |   Staff clicks "Back to staff area" button   |    Staff is redirected to staff area              |   Y   |
+|    12   |   Staff clicks "Edit User" button  |  Staff is redirected to edit user page                |   Y   |
+|   13    |  Staff adds information about  the user and click save changes   |      Pop up appears for the staff to confirm the action            |   Y    |
+|   14    |  Staff clicks "ok"  |   Staff is redirected to user edited confirmation page               |  Y    |
+|  15     |  Staff clicks "back to staff area" button   |   Staff is redirected back to the staff area               |   Y   |
+|    Show Classes   |     |                  |      |
+|     1  |  Staff clicks "Show classes button"   |   Classes table is displayed               |   Y   |
+|   2    |  Staff clicks "Edit Class" Button   | Staff is redirected to edit class page                 |   Y   |
+|     3  |  Staff updates Information and clicks "Edit Class" button   | Pop up appears for the staff to confirm the action   |   Y   |
+|   4    |  Staff clicks "ok"  | staff is redirected to class edited confirmation page|   Y   |
+| 5      |   Staff clicks "back to staff area" Button  |   Staff is redirected to staff area               |   Y   |
+|   6    |   Staff Clicks "Show Users" button in the specific class row  |    Small table of users who has joined the class appears in that specific class row next to the "Show users" button      |   Y   |
+|  7      |  Staff clicks "Delete Class" Button    |  Pop up appears for the staff to confirm the action               |  Y    |
+|    8   |  Staff Clicks "ok"   |  Staff Iis redirected to class deleted confirmation page               |   Y   |
+|    9   |  Staff Clicks "Back to staff area" in class deleted confirmation page   |   Staff is directed to the staff area               |   Y  |
+|   Show Instructors    |     |                 |      |
+|    1   |  Staff clicks "Show Instructors" button   |    Table of instructors is displayed            |  Y    |
+|    2   |  Staff clicks "edit profile" button   |    Staff is redirected to edit instructor profile page            |    Y  |
+|    3   |  Staff updates instructors profile and clicks save changes    |  Pop up appears for the staff to confirm the action              |    Y  |
+|  4     | Staff clicks "ok"    |   Staff is redirected to instructor edited confirmation page              |    Y  |
+|   5    |  Staff clicks "back to staff area" button   |    Staff is redirected to staff area   |  Y    |
+|  Create New Instructor Profile     |     |                 |      |
+|    1   |  Staff clicks "Create New Instructor Profile Button     |    Staff is redirected to          Create New instructor Profile page   |   Y   |
+|   2    |  Staff Create a new instructor profile and clicks save changes  |   Pop up appears for the staff to confirm the action               |   Y   |
+|    3   |  Staff Clicks "ok"   |  Staff is redirected to Instructor Profile Created confirmation page               |   Y   |
+|    4  | Staff click "Back to staff area" button    |  Staff is redirected to staff area               |  Y    |
+|     Create New User Profile  |     |                 |      |
+|    1   |  Staff clicks "Create New User Profile"   |   Staff is directed to Create new user Profile Page              |   Y   |
+|    2   |   Staff creates a new profile and clicks save changes  |    Pop up appears for the staff to confirm the action             |   Y   |
+|   3    |  Staff clicks "ok"   |  Staff is redirected to user profile created confirmation page                |   Y   |
+|     4  |  Staff clicks "Back To Staff Area" button   |   Staff is redirected by to the staff area              |   Y   |
+|   Create New Class    |     |                 |      |
+|    1   | Staff clicks "Create New Class" button    |   Staff is redirected to create new class page              |  Y    |
+|   2    |  Staff creates new class and clicks "create new class" button  |   Pop up appears for the staff to confirm the action               | Y     |
+|    3   |  Staff clicks "ok"   |  Staff is redirected to class created confirmation page               |    Y  |
+|    4   |  Staff Click "Back to staff area" button    |    Staff is redirected back to staff area             |    Y  |
+
+
+
 
 
 ## Validation

@@ -2,6 +2,7 @@
 {% load static %} 
 {% block content %}
 
+
     <div class="container mt-5 mb-5">
         <div class="row g-4">
             {% for gym_class in classes %}
@@ -34,7 +35,7 @@
                                             </a>
                                         {% else %}
                                             {% if gym_class.users.count < gym_class.max_capacity %}
-                                            <a href="{% url 'join_class' class_id=gym_class.class_id %}" onclick="return confirJoin()">
+                                            <a href="{% url 'join_class' class_id=gym_class.class_id %}" onclick="return confirmJoin()">
                                                 <button type="button" class="btn btn-primary">Join Class</button>
                                             </a>
                                             {% else %}

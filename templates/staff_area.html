@@ -62,7 +62,9 @@
               </ul>
               <form method="post" action="{% url 'delete_class' gym_class.class_id %}" style="display: inline;">
                   {% csrf_token %}
-                  <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this class?')">Delete Class</button>
+                  <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this class?')">
+                    Delete Class
+                </button>
               </form>
           </div>
       </li>
@@ -111,4 +113,3 @@
 
     <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
-s

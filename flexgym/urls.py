@@ -37,7 +37,12 @@ urlpatterns = [
     path("create_class_confirmation/", create_class_confirmation , name="create_class_confirmation"),
 
     path('edit_class/<int:class_id>/', edit_class, name ='edit_class'),
+
     path('delete_class/<int:class_id>/', delete_class, name = 'delete_class'),
+    path('delete_class_confirmation/<int:class_id>/', delete_class_confirmation, name='delete_class_confirmation'),
+
+
+
     path('edit_class_confirmation/', edit_class_confirmation, name='edit_class_confirmation'),
 
 

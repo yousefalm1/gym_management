@@ -157,22 +157,27 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 
     ![They have membership ](documentation/website_screenshots/member_join_class.png)
 
-    - WHen use clicks join class  
+
+
+
+    - WHen user clicks join class  
+
+
 
 
     - When user wants to cancel class the button will turn red and have the text "cancel class"
 
-    ![They have membership ](documentation/website_screenshots/cancel_class.png)
+    ![cancel class button](documentation/website_screenshots/cancel_class.png)
 
     - When the user clicks cancel class a pop will appear so the user can confirm the action
 
-    ![They have membership ](documentation/website_screenshots/cancel_class_pop.png)
+    ![Cancel Class pop up ](documentation/website_screenshots/cancel_class_pop.png)
 
 
     - Once the user confirms the action they will directed to a page showing the user that the action has been successful.
 
 
-    ![They have membership ](documentation/website_screenshots/cancel_class_confirmation.png)
+    ![Cancel Class Confirmation ](documentation/website_screenshots/cancel_class_confirmation.png)
 
 
 7. Profile
@@ -189,13 +194,14 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 ## Features (Staff)
 
 1. Staff Area
+
     - When the user who has staff access a staff tab will appear in the nav bar.
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+    ![Instructor page](documentation/website_screenshots/navbar_staff.png)
 
     - When the user clicks the staff area they will be redirected to the staff area page.
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+    ![Instructor page](documentation/website_screenshots/staff_area.png)
 
     - The staff area has 6 buttons:
         - 3 blue buttons which when clicked shows:
@@ -212,7 +218,7 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 
     - When the staff clicks the Show users button all the users will appear in a table with each user having their own row.
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+    ![Instructor page](documentation/website_screenshots/show_users.png)
 
     - Each row has this information about the user:
 
@@ -221,7 +227,7 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
                 - Registration Date
                 - User Type
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+    ![Instructor page](documentation/website_screenshots/show_user_row.png)
 
     - Each row also has 5 different button:
 
@@ -237,54 +243,79 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 
         - When the staff clicks the delete button of a user a pop up will appear to confirm if the staff wants to delete the user.
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![Instructor page](documentation/website_screenshots/delete_button.png)
+
+         ![Instructor page](documentation/website_screenshots/delete_user_pop.png)
+
 
         - Once the staff confirms the deletion of the staff will be redirected to a confirmation page to let the staff know the user has been deleted successfully and a button to go back to the staff area.
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![Instructor page](documentation/website_screenshots/delete_user_confirm.png)
 
 
     - Edit Membership
 
-        - When the staff clicks edit membership they will be redirected to the edit membership page.
+        - When the staff clicks edit membership they will be redirected to the edit membership page (only if the user has a user profile)
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+         ![Instructor page](documentation/website_screenshots/edit_memberhsip_button.png)
+
+        ![Instructor page](documentation/website_screenshots/edit_membership.png)
 
         - The edit membership page will show the staff the current membership of the user and then a membership choice dropdown that will allow the staff to pick a new membership type for the user.
 
         - Once the staff clicks save changes they will be redirected to the confirmation page so the staff knows the membership has successfully been changed.
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![membership edited confirm](documentation/website_screenshots/membership_edited_confirm.png)
 
 
     - Classes Joined
 
         - When the staff clicks the classes joined they will be redirected to classes user joined page where the staff will be able to see:
 
+
+        ![Classes joined ](documentation/website_screenshots/classes_joined_button.png)
+
                 - The classes the use joined.
                 - The room number.
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![classes joined table](documentation/website_screenshots/classes_joined_table.png)
+
+    - Add To Class
+
+        - When the user clicks the "Add to Class" button they will be directed to add user to class page.
+
+
+        ![Instructor page](documentation/website_screenshots/add_to_class_button.png)
+
+        ![Instructor page](documentation/website_screenshots/add_user_to_class.png)
+
+        - Once they add a user to a class and click save changes they will be directed to a confirmation page.
+
+        ![Instructor page](documentation/website_screenshots/add_user_to_class_confirm.png)
+        
+
 
 
     - Edit User
 
         - When the user clicks the edit user they will be directed to a page where they will be able to update the users profile, the information they will be able to update information like:
 
+        ![Instructor page](documentation/website_screenshots/edit_user_button.png)
+
                 - Username
                 - Email Address
                 - First Name
                 - Last Name 
         
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![Instructor page](documentation/website_screenshots/edit_user_form.png)
 
         - Once the staff finished updating the users information they will click save changes and a pop up will appear for the staff member to confirm the save.
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![Instructor page](documentation/website_screenshots/edit_user_popup.png)
 
         - Once clicked they will be be redirected to the confirmation page so the staff will be able to know that the change was successful.
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![Instructor page](documentation/website_screenshots/edit_user_confirmation.png)
 
 3. Show Classes
 
@@ -294,11 +325,14 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
             - Show Users
             - Delete Class
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+    ![Show Classes](documentation/website_screenshots/show_classes_.png)
 
     - Edit Class
 
         - When the staff member clicks the "Edit Class" button they will redirected to a page to update the class information; the information that will be able to edited will be:
+
+        ![Edit Class button](documentation/website_screenshots/edit_class_button.png)
+
 
                 - Class Name
                 - Room Number
@@ -308,68 +342,97 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
                 - Change
                 - Instructors
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![Edit Class form](documentation/website_screenshots/edit_class_form.png)
 
         - Once the staff is done updating the classes information they will click the "Edit The Class" button and will be presented with a pop up to confirm the staff wants to confirm this update.
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![Edit class pop up](documentation/website_screenshots/edit_class_popup.png)
 
         - When the Staff confirms the update they will be redirected to a confirmation page.
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![Edit class confirmation](documentation/website_screenshots/edit_class_confirmation.png)
 
     
     - Show Users
 
         - When the staff member clicks the "Show Users" button all the usernames who have joined the class will appear.
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![Show User Button](documentation/website_screenshots/show_users_button.png)
+
+
+        ![Show Users in class](documentation/website_screenshots/show_users_in_class.png)
 
 
     - Delete Class
 
-        - When the user clicks the "Delete Class" button they will be presented with a pop up for the staff to confirm the action of deleting the class
+        - When the user clicks the "Delete Class" button they will be presented with a pop up for the staff to confirm the action of deleting the class.
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![Delete class button](documentation/website_screenshots/delete_class_button.png)
+
+        ![Delete class pop up](documentation/website_screenshots/delete_class_pop_up.png)
 
         - Once the user deletes confirms the deletion they will be directed to the confirmation page.
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![Instructor page](documentation/website_screenshots/delete_class_confirmation.png)
 
 4. Show Instructors
 
     - When the staff clicks the "Show instructors" button a table with appear with all the instructor profiles that will be shown in the instructors page of the website.
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+    ![Instructor page](documentation/website_screenshots/show_instructors.png)
+
+
 
     - In each row there will be two buttons:
+
+
+    ![Show instructor row](documentation/website_screenshots/show_instructor_row.png)
 
             - Edit Profile
             - Delete 
     
     - Edit Profile 
 
+        ![edit_profile button](documentation/website_screenshots/edit_profile_button.png)
+
         - When the staff click edit profile they will be redirected to the the edit instructor profile page.
 
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![Edit Profile Form](documentation/website_screenshots/edit_profile_form.png)
 
             - Specialization
             - Certification
             - Display name
             - Instructor image
             
-         ![Instructor page](documentation/website_screenshots/landing_page.png)
+        - Once the staff is happy with the changes and click save changes a pop up will appear for the staff to confirm the action.
 
-         - Once the staff is happy with the changes they click the save changes button which will direct the user to the the confirmation page so the staff member knows the changes was successful
+         ![edit instructor popup](documentation/website_screenshots/edit_instructor_popup.png)
+
+         - Once they staff confirms the action they will directed to a confirmation page.
         
-        ![Instructor page](documentation/website_screenshots/landing_page.png)
+        ![instructor profile edit confirmation](documentation/website_screenshots/instructor_profile_edit_confirmation.png)
 
+
+    - Delete 
+
+        ![Delete](documentation/website_screenshots/delete_button.png)
+
+        - When the staff clicks the delete button a pop up will appear asking the staff if they want to go ahead with the deletion.
+
+        ![Delete instructor popup](documentation/website_screenshots/delete_instructor_popup.png)
+
+        - Once the staff confirms the deletion they will be directed to the confirmation page.
+
+        ![Delete instructor confirmation](documentation/website_screenshots/delete_instructor_confirmatiion.png)
+    
 
 5. Create New Instructor Profile
 
     - When the staff clicks "Create New Instructor Profile" button they will be directed to a page with an empty form for the staff to fill in which will then appear in the instructor page of the website for everyone to see.
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+    ![Create new instructor button](documentation/website_screenshots/create_new_instructor_profile_button.png)
+
+    ![Create new instructor form](documentation/website_screenshots/create_new_instructor_profile_form.png)
 
     - The information that the staff would need to fill in would be:
 
@@ -379,18 +442,23 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
             - Display Name
             - Instructor Image
 
-    - Once the staff adds all the required information and clicks the "Create Profile" they will directed to a confirmation page to let the staff know that the new instructor profile has been successfully created.
+    - Once the staff adds all the required information and clicks the "Create Profile" a pop up will appear asking the staff if they want to go ahead with creating the profile.
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)  
+    ![Create new instructor profile pop up ](documentation/website_screenshots/create_instructor_profile_popup.png)
 
+    
+    - Once the staff confirms the creation of the profile they  will directed to a confirmation page to let the staff know that the new instructor profile has been successfully created.
+
+    ![Create new instructor profile confirmation](documentation/website_screenshots/create_new_instructor_confirmation.png)  
 
 
 6. Create New User profile
 
     - When the staff click the "Create New User Profile" button they will be directed to a page with an empty form for the staff to fill in to create a user profile for every user in order to be able to get a membership.
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+    ![Create new user profile button](documentation/website_screenshots/create_new_user_profile_button.png)
 
+    ![Create new user profile confirmation](documentation/website_screenshots/create_new_user_profile_form.png)
 
     - The information that the staff would need to fill in would be: 
     
@@ -399,17 +467,23 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
             - Join Date
             - New Membership purchase
 
-    
-    - Once the staff adds all the required information and click "Create Profile" button they will be directed to a confirmation page to let the staff member knows that the new user profile has been successfully been created.
+    - Once the staff adds all the required information and clicks the "Create Profile" button a pop up will appear asking the staff if they want to go ahead with creating the profile. 
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+    ![Create new user profile pop up](documentation/website_screenshots/create_new_user_profile_popup.png)
+    
+     - Once the staff confirms the creation of the profile they  will directed to a confirmation page to let the staff know that the new user profile has been successfully created.
+    
+    ![Instructor page](documentation/website_screenshots/create_new_user_profile_confirmation.png)
 
 
 7. Create New Class
 
     - When the staff clicks "Create New Class" button they will directed to a page with an empty form for the staff to fill in. This will then to create a new class that will be visible in the classes page of the website.
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+
+    ![create new class button](documentation/website_screenshots/create_new_class_button.png)
+    
+    ![Create new class button](documentation/website_screenshots/create_new_class_form.png)
 
     - The information that the staff would need to fill in would be:
 
@@ -420,9 +494,13 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
             - Class image
             - Instructors
 
-    - Once the staff adds all the required information and click "Create New Class" button they will be directed to a confirmation page to let the staff member knows that new class has been successfully been created.
+    - Once the staff adds all the required information and clicks the "Create New Class" button a pop up will appear asking the staff if they want to go ahead with creating the profile. 
 
-    ![Instructor page](documentation/website_screenshots/landing_page.png)
+    ![Create new class pop up](documentation/website_screenshots/create_new_class_popup.png)
+
+    - Once the staff adds all the required information and clicks "Create New Class" button they will be directed to a confirmation page to let the staff member knows that new class has been successfully been created.
+
+    ![Instructor page](documentation/website_screenshots/create_new_class_confirmation.png)
 
 ---
 
@@ -680,6 +758,64 @@ First step is to create a local copy of the GitHub repository by following one o
 4. click revel config vars and add these vars make sure to make debug false when done.
 
     ![Add vars](documentation/deployment/config_vars.png)
+
+
+
+### Create Database on ElephantSQL
+
+1. Go to [ElephantSQL](https://www.elephantsql.com/) and create a new account or login.
+
+2. Create a new instance of the database.
+
+    ![Create a new instance ](documentation/deployment/create_new_instance.png)
+
+3. Create name and select the free plan named tiny turtle.
+
+    ![select name and plan](documentation/deployment/select_name_and_plan.png)
+
+4. Click "Select Region"
+
+    ![select region ](documentation/deployment/select_region.png)
+
+5. Choose a region near you
+
+    ![choose a region ](documentation/deployment/pick_region.png)
+
+6. Click "Review"
+
+    ![review button](documentation/deployment/click_review_button.png)
+    
+
+7. Click "Create Instance"
+
+    ![Create instance](documentation/deployment/create_instance.png)
+
+
+
+8. Click the name of the the database
+
+    ![Click name](documentation/deployment/click_databse.png)
+
+
+9. Once clicked you will see all the information of the database, in order to connect the project to this database.
+
+    ![Click name](documentation/deployment/database_details.png)
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

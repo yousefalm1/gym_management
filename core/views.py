@@ -82,16 +82,12 @@ def delete_class(request, class_id):
     gym_class = get_object_or_404(GymClasses, pk=class_id)
 
     if request.method == 'POST':
-        if gym_class:
-            gym_class.delete()
-            return redirect('delete_class_confirmation', class_id=class_id)
-
+        gym_class.delete()
+        return redirect('delete_class_confirmation', class_id=class_id)
 
     return render(request, 'delete_class_confirmation.html', {'gym_class': gym_class})
 
-
 def delete_class_confirmation(request, class_id):
-    # Your view logic here, e.g., fetching data related to the deleted class
     return render(request, 'delete_class_confirmation.html', {'class_id': class_id})
 
 
@@ -278,24 +274,17 @@ def edit_instructor_confirmation(request, instructor_id):
     return render(request, 'edit_instructor_confirmation.html', {'instructor': instructor})
 
 
-
-
-
 def delete_instructor(request, instructor_id):
     instructor = get_object_or_404(InstructorProfile, pk=instructor_id)
 
     if request.method == 'POST':
-        if instructor:
-            instructor.delete()
-            return redirect("delete_instructor_confirmation", instructor_id=instructor_id)
-    
+        instructor.delete()
+        return redirect("delete_instructor_confirmation", instructor_id=instructor_id)
+
     return render(request, 'delete_instructor.html', {'instructor': instructor})
 
 def delete_instructor_confirmation(request, instructor_id):
-    return render(request, 'delete_instructor_confirmation.html', {'instructor': instructor_id})
-    
-
-
+    return render(request, 'delete_instructor_confirmation.html', {'instructor_id': instructor_id})
 
 
  

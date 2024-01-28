@@ -757,7 +757,7 @@ First step is to create a local copy of the GitHub repository by following one o
 
 4. click revel config vars and add these vars make sure to make debug false when done.
 
-    ![Add vars](documentation/deployment/config_vars.png)
+    ![Add vars](documentation/deployment/config_vars.png)    
 
 
 
@@ -802,7 +802,7 @@ First step is to create a local copy of the GitHub repository by following one o
     ![Click name](documentation/deployment/database_details.png)
 
 
-    
+
 
 
 

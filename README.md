@@ -1,6 +1,6 @@
 # Gym Website
 
-**Deployed website: [Link to website]()**
+**Deployed website: [Link to website](https://flexgym-b1870d339c98.herokuapp.com/)**
 
 ![Main image](documentation/home_header.png)
 
@@ -11,7 +11,6 @@ Admin login Information:
 
 
 Welcome to our Gym Website! This platform is designed to provide a seamless experience for both members and staff, offering a range of features to enhance your fitness journey. Whether you're a fitness enthusiast looking for classes or a staff member managing the gym operations, this platform has you covered. make this a bit longer.
-
 
 ## How this website will be used and future development for this project
 
@@ -39,49 +38,6 @@ This website is designed to be user-friendly for both staff and members. Members
 
 This website is meant for fitness enthusiasts of all levels, seeking a convenient and engaging platform to enhance their fitness journey. Members who value ease of use, accessibility, and a variety of class options will find our website tailored to their preferences. Whether you're a beginner exploring fitness classes or an experienced gym-goer looking for specific instructors, our platform caters to a diverse range of needs.
 
-### User Stories
-
-#### First Time Visitor
-
- |User Story    | 
-|-------------|
-| As a First Time Visitor, I want a straightforward and intuitive sign-up process to create my account on FlexGym. |
-|  As a First Time Visitor, I want the option to explore the available classes without committing to a login. |
-| As a First Time Visitor, I want to see a diverse range of classes with brief descriptions, so I can quickly identify those that match my interests. |
- | As a First Time Visitor, I want to be able to find the app useful, so that I can use it according to my needs. |
- | As a First Time Visitor, I want to learn more about the instructors, including their expertise and teaching styles, to make informed decisions about the classes I might join. |
- | As a First Time Visitor, I want to be able to see the list of products, so that I can learn the benefits of the app as a user. |
- | As a First Time Visitor, I want access to testimonials from previous learners to gain insights into their experiences and the value they derived from the classes. |
- | As a First Time Visitor, I want the website to provide clear navigation and a visually appealing layout to enhance my overall user experience. |
-
-#### Regular User (Customer)
-
- |User Story    | 
-|-------------|
- |As a regular user, I want a quick and secure login process to access my FlexGym account efficiently. |
-| As a regular user, I want a easy way to see what classes i have joined. |
- |As a regular user, I want to be able to cancel any class that i have joined. |
- |As a regular user, I want a to confirm if i want to cancel my class or join the class so i wont be able to do it by mistake. |
- |As a regular user, I want to be able to see if the class if full. |
- |As a regular user, I want a to be able to see the room number and instructor for the class incase it changes. |
-
-
-#### Admin(Staff)
-|  User Story   | 
-|-------------|
-||As a Admin, I want to be able be able to delete Users. |
-|As a Admin, I want to be able to edit the membership type of any user. |
-|As a Admin, I want to be able to look at all the classes the user has joined. |
-|As a Admin, I want to be able to edit the users profile, such as username, email and name. |
- |As a Admin, I Want to be to Add any user to any class,so that if a member asks (through email or reception desk) to be added to a class maybe because they have no access to the website, the admin will be able to. |
- |As a Admin, I want to be to edit any of classes, so that i can be able to update the class name, room number, description, max capacity, class image, and coach. |
- |As a Admin, I want to be able to look at all the users in each class, so that if member asks if they are enrolled into the class i would be able to check and confirm with them. |
- |As a Admin, I want to be able delete any of the classes, so that if the gym no longer has the class i can remove it from the website. |
- |As a Admin, I want to be able to edit the the profile of all instructor profiles, so that i can update the Specialization, Certification, Display name and Image. |
-|As a Admin, I want to be able to delete any of the instructor profiles, so that if a instructor is no longer with the gym i can remove them from the website. |
- |As a Admin, I want to be able to create a new instructor profile to be added the website, so that when a new instructor join the gym i can add a instructor profile to the user account of the instructor to be displayed on the website. |
- |As a Admin, I want to be able to create a user profile for a user, so that when a user creates an account the admin will be able to add the users membership choice, join date and if its a new membership purchase when the new member speaks to the reception at the gym to pay(Until Future Development When user can pay online).|
- |As a Admin, I want to be able to create a new class, so that when the gym has a new class to offer i will be able to create a new class to be added to the website.
 
 
 ## Technologies Used
@@ -182,12 +138,7 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
     ![They have membership ](documentation/website_screenshots/member_join_class.png)
 
 
-
-
-    - WHen user clicks join class  
-
-
-
+    - When user clicks join class They will be added to the class
 
     - When user wants to cancel class the button will turn red and have the text "cancel class"
 
@@ -750,13 +701,58 @@ Staff Area Page
 
 
 
+### User Stories Check
+
+#### First Time Visitor
+
+ |User Story    | 
+|-------------|
+| As a First Time Visitor, I want a straightforward and intuitive sign-up process to create my account on FlexGym. |
+|  As a First Time Visitor, I want the option to explore the available classes without committing to a login. |
+| As a First Time Visitor, I want to see a diverse range of classes with brief descriptions, so I can quickly identify those that match my interests. |
+ | As a First Time Visitor, I want to be able to find the app useful, so that I can use it according to my needs. |
+ | As a First Time Visitor, I want to learn more about the instructors, including their expertise and teaching styles, to make informed decisions about the classes I might join. |
+ | As a First Time Visitor, I want to be able to see the list of products, so that I can learn the benefits of the app as a user. |
+ | As a First Time Visitor, I want access to testimonials from previous learners to gain insights into their experiences and the value they derived from the classes. |
+ | As a First Time Visitor, I want the website to provide clear navigation and a visually appealing layout to enhance my overall user experience. |
+
+#### Regular User (Customer)
+
+ |User Story    | 
+|-------------|
+ |As a regular user, I want a quick and secure login process to access my FlexGym account efficiently. |
+| As a regular user, I want a easy way to see what classes i have joined. |
+ |As a regular user, I want to be able to cancel any class that i have joined. |
+ |As a regular user, I want a to confirm if i want to cancel my class or join the class so i wont be able to do it by mistake. |
+ |As a regular user, I want to be able to see if the class if full. |
+ |As a regular user, I want a to be able to see the room number and instructor for the class incase it changes. |
+
+
+#### Admin(Staff)
+|  User Story   | 
+|-------------|
+||As a Admin, I want to be able be able to delete Users. |
+|As a Admin, I want to be able to edit the membership type of any user. |
+|As a Admin, I want to be able to look at all the classes the user has joined. |
+|As a Admin, I want to be able to edit the users profile, such as username, email and name. |
+ |As a Admin, I Want to be to Add any user to any class,so that if a member asks (through email or reception desk) to be added to a class maybe because they have no access to the website, the admin will be able to. |
+ |As a Admin, I want to be to edit any of classes, so that i can be able to update the class name, room number, description, max capacity, class image, and coach. |
+ |As a Admin, I want to be able to look at all the users in each class, so that if member asks if they are enrolled into the class i would be able to check and confirm with them. |
+ |As a Admin, I want to be able delete any of the classes, so that if the gym no longer has the class i can remove it from the website. |
+ |As a Admin, I want to be able to edit the the profile of all instructor profiles, so that i can update the Specialization, Certification, Display name and Image. |
+|As a Admin, I want to be able to delete any of the instructor profiles, so that if a instructor is no longer with the gym i can remove them from the website. |
+ |As a Admin, I want to be able to create a new instructor profile to be added the website, so that when a new instructor join the gym i can add a instructor profile to the user account of the instructor to be displayed on the website. |
+ |As a Admin, I want to be able to create a user profile for a user, so that when a user creates an account the admin will be able to add the users membership choice, join date and if its a new membership purchase when the new member speaks to the reception at the gym to pay(Until Future Development When user can pay online).|
+ |As a Admin, I want to be able to create a new class, so that when the gym has a new class to offer i will be able to create a new class to be added to the website. 
+
+All user stories has been accomplished for this project.
 
 
 ## Validation
 
 - ### HTML
 
-    - 
+    - HTML validator was not working because of the django
 
 
 - ### CSS Validation:
@@ -770,21 +766,25 @@ Staff Area Page
 
 
 
-## Bugs 
+## Solved bugs 
 
-    - No Bugs
+    - When user has none membership join class btn was still showing.
+    - Staff area edit instructor profile takes two clicks to work.
+    - When user profile created membership choice empty needed to be none membership.
 
+    
 
 ## Unsolved Bugs
 
-    - The javascript file is not to working with the in the staff area section so i had to add the code to the staff area html and classes html to work
+    - The javascript file is not to working with the in the staff area section so i had to add the code to the staff area html and classes html to work.
+
+    - The 404 and 500 page was was not working it kept giving and error stating "a server error occurred. please contact the administrator"
 
 
 # Deployment
 
 ## Deployment instructions for the project
 
-## Local deployment:
 
 *Note:*
 
@@ -834,7 +834,7 @@ First step is to create a local copy of the GitHub repository by following one o
 
 1. Clone the repository.
 
-    - ```git clone https://github.com/IuliiaKonovalova/e-commerce.git```
+    - ```git clone https://github.com/yousefalm1/gym_management```
 
         ![clone Repo](documentation/deployment/run_clone_command.png)
 
@@ -975,14 +975,24 @@ First step is to create a local copy of the GitHub repository by following one o
 
 9. Once clicked you will see all the information of the database, in order to connect the project to this database.
 
-    ![Click name](documentation/deployment/database_details.png)
+---
+
+## Credits
+
+    Bootstrap
+    Django
+    Github
+    Unsplash
+    heroku
+    ElephantSQL
+
 
 
 ---
 
 ### Acknowledgments
 
-- I extend heartfelt gratitude to my mentor, Julia, for their invaluable guidance and unwavering support. Their mentorship has been a catalyst for my growth, both professionally and personally. I appreciate the wisdom, encouragement, and inspiration they have shared, making this journey an enriching experience.
+I extend heartfelt gratitude to my mentor, Julia, for their invaluable guidance and unwavering support. Their mentorship has been a catalyst for my growth, both professionally and personally. I appreciate the wisdom, encouragement, and inspiration they have shared, making this journey an enriching experience.
 
 
 

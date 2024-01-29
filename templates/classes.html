@@ -56,7 +56,14 @@
         </div>
     </div>
 
-    <script src="{% static 'js/script.js' %}"></script>
+    <script>
+        function confirmJoin() {
+            return confirm("Are you sure you want to join this class?");
+        }
+        function confirmCancel() {
+            return confirm("Are you sure you want to cancel this class?");
+        }
+    </script>
 {% endblock %}
 
 

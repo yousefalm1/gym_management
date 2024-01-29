@@ -4,6 +4,11 @@
 
 ![Main image](documentation/home_header.png)
 
+Admin login Information:
+
+        Username: admin
+        password: admin
+
 
 Welcome to our Gym Website! This platform is designed to provide a seamless experience for both members and staff, offering a range of features to enhance your fitness journey. Whether you're a fitness enthusiast looking for classes or a staff member managing the gym operations, this platform has you covered. make this a bit longer.
 
@@ -21,7 +26,7 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 
  Issue ID    | User Story |
 |-------------|-------------|
-| [#1](https://github.com/) | As a First Time Visitor, I want a straightforward and intuitive sign-up process to create my account on FlexGym. |
+| As a First Time Visitor, I want a straightforward and intuitive sign-up process to create my account on FlexGym. |
 | [#2](https://github.com/) | As a First Time Visitor, I want the option to explore the available classes without committing to a login. |
 | [#3](https://github.com/) | As a First Time Visitor, I want to see a diverse range of classes with brief descriptions, so I can quickly identify those that match my interests. |
 | [#4](https://github.com/) | As a First Time Visitor, I want to be able to find the app useful, so that I can use it according to my needs. |
@@ -507,6 +512,28 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 ## Design
 
 
+### Wire 
+
+Home Page
+
+![home page wire frames](documentation/wireframes/homepage.png)
+
+Instructor Page 
+
+![Instructor page wire frame](documentation/wireframes/instructors.png)
+
+Classes Page
+
+![Classes page wire frame](documentation/wireframes/classes.png)
+
+Profile Page 
+
+![Profile wire frame](documentation/wireframes/profile.png)
+
+Staff Area Page
+
+![Staff Area page wire frame](documentation/wireframes/staff_area.png)
+
 ---
 
 ## Agile Methodology
@@ -544,9 +571,12 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
 - The specific PostgreSQL instance is hosted on ElephantSQL.
 - The dj_database_url package is helping parse the DATABASE_URL from the environment variables.
 
+## Entity-Relationship Diagram
+   
+![GitHub Project Management](documentation/erd.png)
+
 
 ## Data Modeling
-
 
 ### Gym Classes Model
 
@@ -699,7 +729,15 @@ This website is meant for fitness enthusiasts of all levels, seeking a convenien
     - 
 
 
+- ### CSS Validation:
+    No errors or warnings were found when passing through the official W3C jigsaw validator
+    ![Css](documentation/css_test.png)
+
 ---
+
+- ### JsHint
+    No errors or warnings were found when passing through the official  JsHint validator
+    ![](documentation/)
 
 # Deployment
 
@@ -716,8 +754,8 @@ First step is to create a local copy of the GitHub repository by following one o
 
 - Download the Zip file:
 
-  1. Go to the Github repository for this project which is [GitHub Repository page](https://github.com/yousefalm1/gym_management).
-    ![GitHub Project Management](documentation/deployment/github_repo.png)
+  1. Go to the Github repository for this project which is !
+    [GitHub Project Management](documentation/deployment/github_repo.png)
 
   2. Click the Code button and download the ZIP file containing the project.
     ![GitHub Project Management](documentation/deployment/download_zip.png)
@@ -897,6 +935,15 @@ First step is to create a local copy of the GitHub repository by following one o
 9. Once clicked you will see all the information of the database, in order to connect the project to this database.
 
     ![Click name](documentation/deployment/database_details.png)
+
+
+---
+
+### Acknowledgments
+
+- I extend heartfelt gratitude to my mentor, Julia, for their invaluable guidance and unwavering support. Their mentorship has been a catalyst for my growth, both professionally and personally. I appreciate the wisdom, encouragement, and inspiration they have shared, making this journey an enriching experience.
+
+
 
 
 

@@ -4,13 +4,11 @@ from django.urls import reverse
 
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
-
 from django.contrib.auth.models import User
 from .models import GymClasses, UserProfile, InstructorProfile
 from .forms import InstructorProfileForm, GymClassForm, UserProfileForm, UserForm
 
-def error_404(request, exception):
-    return render(request, '404.html')
+
 
 
 def index(request):
@@ -287,6 +285,9 @@ def delete_instructor_confirmation(request, instructor_id):
     return render(request, 'delete_instructor_confirmation.html', {'instructor_id': instructor_id})
 
 
- 
+# def handler404(request, exception):
+#     return render(request, 'errors/404.html', status=404)
 
 
+# def handler500(request):
+#     return render(request, "errors/500.html", status=500)

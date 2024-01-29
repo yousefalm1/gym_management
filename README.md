@@ -986,6 +986,10 @@ First step is to create a local copy of the GitHub repository by following one o
     heroku
     ElephantSQL
 
+    Used this for hero section https://library.livecanvas.com/sections/hero-with-glassmorphism/
+    Used this to help with loops thttps://stackoverflow.com/questions/6998366/django-templates-forloop-first-and-forloop-last
+
+
 
 
 ---

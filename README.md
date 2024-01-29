@@ -12,6 +12,25 @@ Admin login Information:
 
 Welcome to our Gym Website! This platform is designed to provide a seamless experience for both members and staff, offering a range of features to enhance your fitness journey. Whether you're a fitness enthusiast looking for classes or a staff member managing the gym operations, this platform has you covered. make this a bit longer.
 
+
+## How this website will be used and future development for this project
+
+### Membership Process:
+User Registration:
+
+Users can register on the website, providing necessary details to create an account.
+Membership Activation:
+
+Only staff members have the authority to create user profiles with memberships.
+This typically happens when a user physically attends the gym, completes the required paperwork, and makes a payment.
+Choosing Memberships:
+
+During the physical registration process, users can pick the membership plan that suits them best.
+### Future Features:
+
+In future updates, we plan to introduce online payment methods, providing users with the convenience of selecting a membership and making payments directly on the website. This streamlined process will automatically create a user profile with an active membership.
+
+Our goal is to enhance the user experience, making it easier for members to manage their memberships and enjoy the full range of classes offered by the gym 
 ## UX
 
 This website is designed to be user-friendly for both staff and members. Members can easily browse, book, and cancel classes, as well as access detailed information about instructors to find the best fit for their needs. On the staff side, the interface allows seamless editing of user information, creation of user and instructor profiles, and addition of new classes. The straightforward design ensures a smooth experience for both users and staff, emphasizing simplicity and functionality.
@@ -748,7 +767,6 @@ Staff Area Page
 
 - ### JsHint
     No errors or warnings were found when passing through the official  JsHint validator
-    ![](documentation/)
 
 
 
@@ -760,13 +778,6 @@ Staff Area Page
 ## Unsolved Bugs
 
     - The javascript file is not to working with the in the staff area section so i had to add the code to the staff area html and classes html to work
-
-
-
-## light house testing
-
-
-
 
 
 # Deployment

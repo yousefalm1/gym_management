@@ -1,6 +1,5 @@
 # Gym Website
 
-**Deployed website: [Link to website](https://flexgym-b1870d339c98.herokuapp.com/)**
 
 ![Main image](documentation/home_header.png)
 

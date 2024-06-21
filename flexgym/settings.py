@@ -1,7 +1,6 @@
-import dj_database_url
 from pathlib import Path
 import os
-
+import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
@@ -13,7 +12,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure-qz!43&dim=&$#hal25gk0z2mccwrn=#qyw@3%v%ciw!4jzdr9#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -124,12 +123,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# settings.py
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

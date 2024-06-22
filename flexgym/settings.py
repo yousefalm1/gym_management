@@ -17,8 +17,7 @@ SECRET_KEY = 'django-insecure-qz!43&dim=&$#hal25gk0z2mccwrn=#qyw@3%v%ciw!4jzdr9#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get(
-    'ALLOWED_HOSTS', 'gym-management16-380f4abf25ba.herokuapp.com').split(',')
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
